@@ -1,0 +1,301 @@
+/* CSS files add styling rules to your content */
+
+body {
+  margin: 0em;
+  font-family: "Noto Sans", sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fjalla One", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: wavy;
+  background-color: transparent;
+  font-family: "Noto Sans", sans-serif;
+}
+
+
+/************************************************************/
+.header {
+  /*background: #c31414;*/
+  background: #ea0405;
+  color: white;
+  padding-top: 1.4rem;
+
+  /*position: fixed;*/
+  left: 0;
+  top: 0;
+  right: 0;
+} 
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1.4rem;
+  
+
+}
+
+a.logo {
+  width: 180px;
+}
+
+a:hover {
+  color: #bd2130;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+.navigation ul li a {
+  display: block;
+  padding: 0.7rem 0.7em;
+  transition: all 0.4s linear;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background: black;
+}
+
+.main {
+  /*padding-top: 12rem;*/
+}
+
+
+.menu-icon{
+  display: none;
+}
+
+@media only screen and (max-width: 994px) {
+  
+  .menu-icon{
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  }
+  
+  
+  .navigation {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navigation ul{
+    display: none;
+  }
+  
+  .navigation ul.show{
+    display: block;
+  }
+  
+  .navigation ul li {
+    display: block;
+  }
+
+  .navigation ul li a {
+    display: block;
+    padding: 0.5rem 0.4rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+  }
+
+  .navigation ul li a:hover {
+    background: black;
+  }
+}
+
+
+/*************************************************************/
+
+.cover {
+  height: 350px;
+  background-image: url(https://cdn.glitch.com/d12d0204-1e38-4ee3-a903-f70f1ff0b383%2Ffondo.jpg?v=1615498274742);
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+.cover-small {
+  height: 200px;
+  background-blend-mode: normal;
+}
+
+.card {
+  border: 0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1),
+    0 2px 4px -1px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  min-height: 3rem;
+}
+
+.card-title2 {
+  min-height: 2rem;
+  font-family: "Noto Sans", sans-serif;
+  color: #bd2130;
+}
+.card-text {
+  min-height: 7rem;
+}
+
+.card-contacto {
+  font-size: 14px;
+}
+
+.responsive-iframe {
+  position: relative;
+  padding-top: 56.25%;
+}
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+img.ig {
+  margin-left: 100px;
+  float: left;
+  padding: 3px;
+}
+
+img.logo {
+  float: left;
+  flex-wrap: wrap;
+}
+
+.product-stripe {
+  overflow-x: scroll;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.stripe-container {
+  display: flex;
+}
+
+.stripe-container .card {
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.image-container {
+  width: 100%;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: center;
+  flex-shrink:0;
+}
+
+/* PIE DE PAGINA */
+.redes {
+  background: #000;
+  height: 30px;
+  padding: 30px;
+}
+.sociales {
+  text-align: center;
+}
+.sociales li {
+  display: inline-block;
+}
+.sociales a {
+  padding: 10px;
+  padding-right: 40px;
+}
+
+footer {
+  /*max-width: 1000px;*/
+  background: #000;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  font-family: arial;
+  font-size: 15px;
+}
+
+/* PIE DE PAGINA */
+
+
+/*--------------CONTACTO -----------------*/
+
+.templatemo_contacttitle {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+}
+
+.templatemo_sub_contacttitle {
+    width: 100%;
+    font-size: 22px;
+    color: #91bf24;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.templatemo_contact {
+    margin: 30px;
+    width: 100%;
+    /*margin-left: 15%;*/
+}
+
+.templatemo_contactform input, textarea {
+    width: 100%;
+    background: #282828;
+    border: 1px solid #393939;
+    padding: 7px 10px;
+    margin: 0px 0px 10px 0px;
+    background-color: #FAFAFA;
+}
+
+.templatemo_contactform textarea {
+    height: 100px;
+}
+
+
+.templatemo_contactform .btn-primary {
+    background: #92bf24;
+    border: none;
+    border-radius: 0px;
+    color: #3d5602;
+    font-weight: 800;
+}
+
+.templatemo_contactform .btn-primary:hover {
+    background: #a6d82c;
+}
+
+/*-----------------------------------------*/
