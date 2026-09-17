@@ -5,12 +5,45 @@ jQuery('document').ready(function($){
   
   
   menuBtn.click(function(){
-  
+
     if(menu.hasClass('show')){
         menu.removeClass('show');
     }else{
         menu.addClass('show');
     }
-                
+
   });
+
+  var form = $('#form-contacto');
+  if (form.length) {
+    form.on('submit', function (e) {
+      e.preventDefault();
+
+      var status = $('#form-status');
+      var button = form.find('button[type="submit"]');
+      button.prop('disabled', true).text('Enviando...');
+      status.removeClass('text-success text-danger').text('');
+
+      fetch(form.attr('action'), {
+        method: 'POST',
+        body: new FormData(form[0]),
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.success) {
+            status.addClass('text-success').text('¡Gracias! Tu mensaje fue enviado, te vamos a contactar a la brevedad.');
+            form[0].reset();
+          } else {
+            status.addClass('text-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+          }
+        })
+        .catch(function () {
+          status.addClass('text-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+        })
+        .finally(function () {
+          button.prop('disabled', false).text('Enviar');
+        });
+    });
+  }
 });
