@@ -186,6 +186,21 @@ a:hover {
   height: 100%;
 }
 
+/* Sección de contacto */
+#contacto .contacto-item {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+#contacto .contacto-icon {
+  display: inline-block;
+  width: 1.6rem;
+}
+
+#contacto #form-status.alert {
+  font-size: 0.95rem;
+}
+
 img.ig {
   margin-left: 100px;
   float: left;

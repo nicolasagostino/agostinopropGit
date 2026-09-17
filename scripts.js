@@ -22,7 +22,7 @@ jQuery('document').ready(function($){
       var status = $('#form-status');
       var button = form.find('button[type="submit"]');
       button.prop('disabled', true).text('Enviando...');
-      status.removeClass('text-success text-danger').text('');
+      status.removeClass('alert alert-success alert-danger').text('');
 
       fetch(form.attr('action'), {
         method: 'POST',
@@ -32,14 +32,14 @@ jQuery('document').ready(function($){
         .then(function (res) { return res.json(); })
         .then(function (data) {
           if (data.success) {
-            status.addClass('text-success').text('¡Gracias! Tu mensaje fue enviado, te vamos a contactar a la brevedad.');
+            status.addClass('alert alert-success').text('¡Gracias! Tu mensaje fue enviado, te vamos a contactar a la brevedad.');
             form[0].reset();
           } else {
-            status.addClass('text-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+            status.addClass('alert alert-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
           }
         })
         .catch(function () {
-          status.addClass('text-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+          status.addClass('alert alert-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
         })
         .finally(function () {
           button.prop('disabled', false).text('Enviar');
