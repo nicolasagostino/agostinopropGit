@@ -8,6 +8,7 @@ Genera:
 - ventas.html y alquileres.html: los listados, con filtros y orden.
 - index.html, tasaciones.html, quienessomos.html, contacto.html y 404.html, a partir de
   los archivos de _build/paginas/ (ahí se edita el contenido de esas páginas).
+  Las opiniones de clientes salen de data/opiniones.json.
 - sitemap.xml y robots.txt.
 
 Las fotos se toman de assets/img/<ventas|alquileres>/<id>/01.jpg, 02.jpg, ...
@@ -462,6 +463,37 @@ def html_destacadas(propiedades):
     )
 
 
+def html_opiniones(datos):
+    tarjetas = "".join(
+        '          <div class="col-12 col-sm-6 col-lg-4 mb-4">\n'
+        '            <div class="card h-100 p-4">\n'
+        '              <div class="resenas-estrellas mb-3">★★★★★</div>\n'
+        f'              <p class="card-text">"{esc(o["texto"])}"</p>\n'
+        f'              <p class="resenas-autor">&mdash; {esc(o["nombre"])}</p>\n'
+        "            </div>\n"
+        "          </div>\n"
+        for o in datos["opiniones"]
+    )
+    url = esc(datos["url"])
+    return (
+        '    <section id="resenas">\n'
+        '      <div class="container mt-5 mb-5">\n'
+        '        <div class="text-center mb-4">\n'
+        "          <h2>Lo que dicen nuestros clientes</h2>\n"
+        f'          <a class="resenas-badge" href="{url}" target="_blank" rel="noopener">\n'
+        '            <span class="resenas-estrellas">★★★★★</span>\n'
+        f'            <strong>{datos["puntaje"]}</strong> &middot; {datos["cantidad"]} opiniones en Google\n'
+        "          </a>\n"
+        "        </div>\n"
+        '        <div class="row justify-content-center">\n' + tarjetas + "        </div>\n"
+        '        <div class="text-center mt-3">\n'
+        f'          <a class="btn btn-outline-danger" href="{url}" target="_blank" rel="noopener">Ver todas las opiniones en Google</a>\n'
+        "        </div>\n"
+        "      </div>\n"
+        "    </section>"
+    )
+
+
 # ---------- páginas fijas (Home, Tasaciones, Quiénes somos, Contacto, 404) ----------
 
 def leer_pagina_fija(ruta):
@@ -485,7 +517,7 @@ def leer_pagina_fija(ruta):
     return meta
 
 
-def render_paginas_fijas(base, propiedades):
+def render_paginas_fijas(base, propiedades, opiniones):
     carpeta = os.path.join(RAIZ, "_build", "paginas")
     publicas = []
     for nombre in sorted(os.listdir(carpeta)):
@@ -502,7 +534,10 @@ def render_paginas_fijas(base, propiedades):
             DENTRO_HEADER=m["hero"],
             DESPUES_HEADER="",
             CONTENIDO=m["contenido"].replace("{{BUSCADOR}}", html_buscador(propiedades))
-                                    .replace("{{DESTACADAS}}", html_destacadas(propiedades)),
+                                    .replace("{{DESTACADAS}}", html_destacadas(propiedades))
+                                    .replace("{{OPINIONES}}", html_opiniones(opiniones))
+                                    .replace("{{PUNTAJE}}", str(opiniones["puntaje"]))
+                                    .replace("{{CANTIDAD}}", str(opiniones["cantidad"])),
             SCRIPTS=f'    <script src="{m["script"]}" defer></script>' if m.get("script") else "",
         ))
         escribir(m["archivo"], salida)
@@ -527,6 +562,8 @@ def main():
         propiedades = json.load(f)
     with open(os.path.join(RAIZ, "_build", "base.html"), encoding="utf-8") as f:
         base = f.read()
+    with open(os.path.join(RAIZ, "data", "opiniones.json"), encoding="utf-8") as f:
+        opiniones = json.load(f)
 
     cambio = False
     for p in propiedades:
@@ -541,7 +578,7 @@ def main():
         n = render_listado(operacion, propiedades, base)
         print(f"OK {OPERACIONES[operacion][0]}.html ({n} propiedades)")
 
-    urls = render_paginas_fijas(base, propiedades)
+    urls = render_paginas_fijas(base, propiedades, opiniones)
     urls += [f"/{OPERACIONES[o][0]}.html" for o in OPERACIONES]
     urls += [url_pagina(p) for p in propiedades if p["estado"] != "vendida"]
     escribir_sitemap_y_robots(sorted(dict.fromkeys(urls), key=lambda u: (u != "/", u)))

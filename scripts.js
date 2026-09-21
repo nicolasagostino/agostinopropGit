@@ -1,9 +1,9 @@
 jQuery('document').ready(function($){
-                         
+
   var menuBtn = $('.menu-icon'),
       menu = $('.navigation ul');
-  
-  
+
+
   menuBtn.click(function(){
 
     if(menu.hasClass('show')){
@@ -23,13 +23,18 @@ jQuery('document').ready(function($){
     }
   });
 
-  var form = $('#form-contacto');
-  if (form.length) {
+  // Formularios que se envían con Web3Forms (form[data-web3])
+  $('form[data-web3]').each(function () {
+    var form = $(this);
+    var button = form.find('button[type="submit"]');
+    var textoBoton = button.text();
+    var mensajeOk = form.data('ok') || '¡Gracias! Tu mensaje fue enviado, te vamos a contactar a la brevedad.';
+    var mensajeError = 'No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.';
+
     form.on('submit', function (e) {
       e.preventDefault();
 
-      var status = $('#form-status');
-      var button = form.find('button[type="submit"]');
+      var status = form.find('.form-estado');
       button.prop('disabled', true).text('Enviando...');
       status.removeClass('alert alert-success alert-danger').text('');
 
@@ -41,18 +46,18 @@ jQuery('document').ready(function($){
         .then(function (res) { return res.json(); })
         .then(function (data) {
           if (data.success) {
-            status.addClass('alert alert-success').text('¡Gracias! Tu mensaje fue enviado, te vamos a contactar a la brevedad.');
+            status.addClass('alert alert-success').text(mensajeOk);
             form[0].reset();
           } else {
-            status.addClass('alert alert-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+            status.addClass('alert alert-danger').text(mensajeError);
           }
         })
         .catch(function () {
-          status.addClass('alert alert-danger').text('No se pudo enviar el mensaje. Probá de nuevo o contactanos por WhatsApp.');
+          status.addClass('alert alert-danger').text(mensajeError);
         })
         .finally(function () {
-          button.prop('disabled', false).text('Enviar');
+          button.prop('disabled', false).text(textoBoton);
         });
     });
-  }
+  });
 });

@@ -8,6 +8,7 @@ Es un sitio estático: no hay servidor ni base de datos. Las páginas se generan
 | Qué | Dónde |
 | --- | --- |
 | Datos de todas las propiedades (venta y alquiler) | `data/propiedades.json` |
+| Opiniones de clientes y puntaje de Google | `data/opiniones.json` |
 | Fotos de cada propiedad | `assets/img/ventas/<id>/` y `assets/img/alquileres/<id>/` |
 | Contenido de Home, Tasaciones, Quiénes somos, Contacto y 404 | `_build/paginas/` |
 | Menú, pie de página y estructura común de las páginas | `_build/base.html` |
@@ -93,6 +94,8 @@ Editar `_build/base.html` y correr el generador: se actualizan todas las página
 ## Otras cosas a saber
 
 - **Formulario de contacto:** usa [Web3Forms](https://web3forms.com) y los mensajes llegan a agostinoprop@gmail.com. La clave está en `_build/paginas/contacto.html`.
+- **Opiniones de clientes:** están en `data/opiniones.json` (puntaje, cantidad y las reseñas). Se muestran en el Home y en Quiénes somos, y las cifras "4.4 ★ · 13 opiniones" salen de ese mismo archivo: al actualizarlo cambian en las dos páginas.
+- **Formulario de tasación:** está en `_build/paginas/tasaciones.html` y llega al mismo mail que el de contacto. El asunto empieza con "Nuevo mensaje desde agostinoprop.com.ar", así que el filtro de Gmail que reenvía a Yahoo también lo captura.
 - **Propiedades destacadas del Home:** se muestran 4 elegidas al azar en cada visita, entre las propiedades en venta disponibles (`assets/js/home.js`). No hace falta marcar ninguna.
 - **Buscador del Home:** lleva a Ventas o Alquileres con los filtros ya aplicados; sus opciones se generan solas a partir del JSON.
 - **Aviso COTI:** se agrega solo al final de todas las propiedades en venta (texto fijo en `_build/build.py`).

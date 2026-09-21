@@ -17,56 +17,86 @@ descripcion: Tasación de inmuebles en Ramos Mejía: un matriculado evalúa tu p
     
 <!-- contenido -->
     <section>
-      <div class="container mt-5 mb-5">
+      <div class="container mt-5">
         <div class="content-card p-4 p-md-5">
           <div class="row align-items-center">
             <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
               <div class="imagen-marco">
-                <img
-                  src="/assets/img/calculadora.jpg"
-                  alt="calculadora"
-                  class="img-fluid"
-                />
+                <img src="/assets/img/calculadora.jpg" alt="calculadora" class="img-fluid" />
               </div>
             </div>
             <div class="col-12 col-md-8">
-              <p>
-                Si desea tasar su inmueble, no dude en comunicarse con
-                nosotros. Ofrecemos un servicio de tasaciones completo y
-                preciso para que nuestros clientes puedan conocer el
-                verdadero valor de sus propiedades. Un matriculado
-                evaluará de forma presencial las características del
-                inmueble y le comunicará su valor, teniendo en cuenta los
-                valores de mercado inmobiliario y de propiedades
-                comparables.
-              </p>
-              <p>
-                Agostino Propiedades le brinda confianza y seguridad a la
-                hora de realizar su tasación debido a la amplia
-                experiencia y trayectoria en el rubro.
-              </p>
-              <p>
-                Si está buscando saber cuánto vale su propiedad, no dude
-                en ponerse en contacto con nosotros para solicitar una
-                tasación profesional y confiable.
-              </p>
-
-              <div class="hero-actions justify-content-start">
-                <a class="nav-link" href="/contacto.html">
-                  <button class="btn btn-danger">Contáctanos</button>
-                </a>
-                <a
-                  class="nav-link"
-                  href="https://wa.me/5491168042437"
-                  target="_blank"
-                >
-                  <button class="btn btn-success"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />WhatsApp</button>
-                </a>
-              </div>
+              <p>Si desea tasar su inmueble, no dude en comunicarse con nosotros. Ofrecemos un servicio de tasaciones completo y preciso para que nuestros clientes puedan conocer el verdadero valor de sus propiedades. Un matriculado evaluará de forma presencial las características del inmueble y le comunicará su valor, teniendo en cuenta los valores de mercado inmobiliario y de propiedades comparables.</p>
+              <p>Agostino Propiedades le brinda confianza y seguridad a la hora de realizar su tasación debido a la amplia experiencia y trayectoria en el rubro.</p>
+              <p>Si está buscando saber cuánto vale su propiedad, no dude en ponerse en contacto con nosotros para solicitar una tasación profesional y confiable.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    
+    <section>
+      <div class="container mt-5">
+        <div class="pasos">
+          <div class="content-card paso p-4">
+            <span class="paso-numero">1</span>
+            <h4>Contactanos</h4>
+            <p>Comunicate con nosotros para solicitar la tasación de tu inmueble.</p>
+          </div>
+          <div class="content-card paso p-4">
+            <span class="paso-numero">2</span>
+            <h4>Evaluación presencial</h4>
+            <p>Un matriculado evalúa las características del inmueble.</p>
+          </div>
+          <div class="content-card paso p-4">
+            <span class="paso-numero">3</span>
+            <h4>El valor de tu propiedad</h4>
+            <p>Te comunicamos su valor, teniendo en cuenta los valores de mercado inmobiliario y de propiedades comparables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solicitar">
+      <div class="container mt-5 mb-5">
+        <div class="tasacion-panel">
+          <div class="tasacion-info">
+            <h2>Solicitá una tasación profesional y confiable</h2>
+            <p>Dejanos los datos de tu propiedad y nos ponemos en contacto con vos.</p>
+            <div class="acciones-panel">
+              <a class="btn btn-success" href="https://wa.me/5491168042437" target="_blank" rel="noopener"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />WhatsApp</a>
+              <a class="btn btn-outline-light" href="/contacto.html">Contáctanos</a>
+            </div>
+          </div>
+          <form class="tasacion-form" data-web3 data-ok="¡Gracias! Recibimos tu pedido de tasación, te vamos a contactar a la brevedad." action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d3e34607-8743-4a80-a8c0-79806ddb0011" />
+            <input type="hidden" name="subject" value="Nuevo mensaje desde agostinoprop.com.ar (Solicitud de tasación)" />
+            <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-group">
+              <label for="t-nombre">Nombre</label>
+              <input type="text" class="form-control" id="t-nombre" name="Nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="t-email">E-mail</label>
+              <input type="email" class="form-control" id="t-email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="t-telefono">Teléfono</label>
+              <input type="tel" class="form-control" id="t-telefono" name="Telefono" />
+            </div>
+            <div class="form-group">
+              <label for="t-direccion">Dirección de la propiedad</label>
+              <input type="text" class="form-control" id="t-direccion" name="Direccion" required />
+            </div>
+            <div class="form-group">
+              <label for="t-mensaje">Comentarios (opcional)</label>
+              <textarea class="form-control" id="t-mensaje" name="Mensaje" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-block">Solicitar tasación</button>
+            <div class="form-estado mt-3"></div>
+          </form>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,19 @@
+{
+  "puntaje": 4.4,
+  "cantidad": 13,
+  "url": "https://maps.app.goo.gl/EoZkrwewDohKm8bVA",
+  "opiniones": [
+    {
+      "nombre": "Mónica",
+      "texto": "Profesionalismo y eficiencia. Muy buena predisposición con el cliente. Te asesoran convenientemente. Recomiendo esta inmobiliaria en Ramos Mejía que se destaca por su honestidad y cumplimiento de mis expectativas."
+    },
+    {
+      "nombre": "Lucila",
+      "texto": "Excelente atención y predisposición. Cumplieron con todo, muchas gracias!"
+    },
+    {
+      "nombre": "Raimel",
+      "texto": "Muy buen servicio y atención"
+    }
+  ]
+}
