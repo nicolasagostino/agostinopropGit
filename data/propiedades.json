@@ -850,5 +850,59 @@
     "fotos": 32,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.86937270668!2d-58.49305988200762!3d-34.64921363975335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9a75f99d029%3A0x8daad71fb9d006d5!2sBasualdo%201200%2C%20C1440DNR%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1773434879538!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "lasheras",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Impecable Depto. 3 Amb Con Cochera Cubierta",
+    "zona": "Ramos Mejía",
+    "direccion": "Las Heras 1-300",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 1600000,
+    "expensas": null,
+    "sup_total": 115,
+    "sup_cubierta": 110,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 2,
+    "cocheras": 1,
+    "antiguedad": 20,
+    "extras": [],
+    "descripcion": [
+      "Departamento en alquiler ubicado en un edificio de varios pisos, con una superficie total de 115 m² y 110 m² cubiertos. La propiedad cuenta con dos dormitorios y dos baños, ofreciendo espacios definidos y funcionales. El living se destaca por sus ventanales al exterior y pisos de madera, proporcionando una conexión visual con el entorno urbano. El departamento incluye una cocina equipada, con muebles de madera y mesada de granito, además de un área de comedor diario. El balcón presenta deck de madera y parrilla a gas natural, permitiendo disfrutar de vistas abiertas a la ciudad. Los dormitorios disponen uno de placard y el principal es en suite con vestidor y baño. Los baños están revestidos en cerámica, con bañera y detalles de iluminación. La cochera es cubierta."
+    ],
+    "caracteristicas": {
+      "Comodidades y equipamiento": [
+        "Rampa para silla de ruedas",
+        "Acceso a internet",
+        "Ascensor"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "Línea telefónica",
+        "Gas Natural",
+        "Aire acondicionado",
+        "Calefacción"
+      ],
+      "Ambientes": [
+        "Placards",
+        "Toilette",
+        "Comedor",
+        "Vestidor",
+        "Living",
+        "Dormitorio en suite",
+        "Balcón",
+        "Cocina",
+        "Lavadero",
+        "Parrilla"
+      ]
+    },
+    "fotos": 25,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5603854760684!2d-58.558266200000006!3d-34.6405481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e309da1047%3A0xdf348590a2a0042a!2sLas%20Heras%2072%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1777596158694!5m2!1ses-419!2sar"
   }
 ]
