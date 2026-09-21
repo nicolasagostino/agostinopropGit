@@ -23,6 +23,21 @@ jQuery('document').ready(function($){
     }
   });
 
+  // Eventos de Google Analytics (si no está cargado, no hacen nada)
+  function evento(nombre, parametros) {
+    if (typeof gtag === 'function') { gtag('event', nombre, parametros); }
+  }
+
+  // Clics en cualquier enlace a WhatsApp, indicando de dónde salió
+  $(document).on('click', 'a[href*="wa.me"]', function () {
+    var link = $(this);
+    var lugar = 'contenido';
+    if (link.closest('.topbar').length) { lugar = 'barra_superior'; }
+    else if (link.closest('.wsp-flotante').length || link.hasClass('wsp-flotante')) { lugar = 'boton_flotante'; }
+    else if (link.closest('.pie').length) { lugar = 'pie'; }
+    evento('clic_whatsapp', { ubicacion: lugar, pagina: location.pathname });
+  });
+
   // Formularios que se envían con Web3Forms (form[data-web3])
   $('form[data-web3]').each(function () {
     var form = $(this);
@@ -47,6 +62,7 @@ jQuery('document').ready(function($){
         .then(function (data) {
           if (data.success) {
             status.addClass('alert alert-success').text(mensajeOk);
+            evento('generate_lead', { formulario: form.hasClass('tasacion-form') ? 'tasacion' : 'contacto' });
             form[0].reset();
           } else {
             status.addClass('alert alert-danger').text(mensajeError);

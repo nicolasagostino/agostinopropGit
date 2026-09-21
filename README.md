@@ -121,4 +121,5 @@ Editar `_build/base.html` y correr el generador: se actualizan todas las página
 - **Buscador del Home:** lleva a Ventas o Alquileres con los filtros ya aplicados; sus opciones se generan solas a partir del JSON.
 - **Aviso COTI:** se agrega solo al final de todas las propiedades en venta (texto fijo en `_build/build.py`).
 - **Rangos del filtro de precio:** están en `PRECIOS_FILTRO` de `_build/build.py`; conviene ajustarlos si cambian los precios.
+- **Estadísticas de visitas:** Google Analytics 4 (analytics.google.com, ID de medición `G-29H59XEFS2`, puesto en `_build/base.html`). Además de las visitas registra dos eventos propios, definidos en `scripts.js`: `clic_whatsapp` (con la ubicación del botón) y `generate_lead` (formulario de contacto o de tasación enviado). No cuenta las visitas hechas desde `localhost`.
 - **Dominio:** el archivo `CNAME` apunta a `agostinoprop.com.ar`.
