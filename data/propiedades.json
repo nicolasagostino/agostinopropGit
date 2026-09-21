@@ -1,0 +1,854 @@
+[
+  {
+    "id": "gonzalez_castillo",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "PH 56 m² 3 Ambientes Al Frente en Venta",
+    "zona": "Ramos Mejía",
+    "direccion": "José González Castillo 596",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 67000,
+    "expensas": null,
+    "sup_total": null,
+    "sup_cubierta": 56,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": null,
+    "antiguedad": 15,
+    "extras": [
+      "1 Toilette",
+      "Frente",
+      "Orientación SO",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "1° piso: Living/comedor apróx 3 x 6 , baño completo, cocina/comedor 3 x 2.80 con bajo mesada y alacena pisos de cerámica.",
+      "2° piso: 2 dormitorios de 3 x 3 con placard, estufa tiro balanceado, piso de cerámica pasillo de distribución, toilette, lavadero semi cubierto con termotanque."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cantidad plantas: 2",
+        "Frente del terreno (mts): 3",
+        "Largo del terreno (mts): 9",
+        "Superficie Semicubierta (m²): 4"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Living comedor"
+      ]
+    },
+    "fotos": 14,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.381616214166!2d-58.549271899999994!3d-34.6450642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc80b50fff6a5%3A0x2aa21fa1dd9c956b!2sJos%C3%A9%20Gonz%C3%A1lez%20Castillo%20596%2C%20B1704GBL%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763254220529!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "castillo",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Duplex 4 Amb con entrada de Auto en Excelente Estado",
+    "zona": "Ramos Mejía",
+    "direccion": "Castillo",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Dúplex",
+    "moneda": "USD",
+    "precio": 210000,
+    "expensas": null,
+    "sup_total": 150,
+    "sup_cubierta": 115,
+    "ambientes": 4,
+    "dormitorios": 3,
+    "banos": 2,
+    "cocheras": 1,
+    "antiguedad": 30,
+    "extras": [
+      "1 Toilette",
+      "Frente",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Dúplex con entrada de auto cubierta",
+      "P. baja: living/comedor - cocina/comedor - toilette - patio amplio con lavadero y parrilla",
+      "P. alta: 3 dormitorios (1 en suite) - baño completo",
+      "Listo para habitar, en óptimo estado de conservación"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Cantidad plantas: 2",
+        "Cochera cubierta",
+        "Parrilla"
+      ],
+      "Servicios": [
+        "Internet / Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor de diario",
+        "Dormitorio en suite",
+        "Lavadero",
+        "Living comedor",
+        "Patio"
+      ]
+    },
+    "fotos": 19,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/embed?mid=1-lhMiDLHH1XJNOMjj2k5vUvBUxet2iE&ehbc=2E312F"
+  },
+  {
+    "id": "colombia",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Casa 5 Ambientes 2 Plantas con Ascensor",
+    "zona": "Ramos Mejía",
+    "direccion": "Colombia 1679",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 230000,
+    "expensas": null,
+    "sup_total": 170,
+    "sup_cubierta": null,
+    "ambientes": 5,
+    "dormitorios": null,
+    "banos": 3,
+    "cocheras": 3,
+    "antiguedad": 70,
+    "extras": [
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Casa 5 amb sobre lote de 10 x 35 mts. Jardín al frente con entrada de auto para 3 vehículos, 2 cubiertos, en P. baja: living - comedor - baño completo - cocina/comedor - ascensor hidráulico a P. alta - galería cubierta con parrilla - lavadero y cuarto de herramientas - fondo libre.",
+      "P. alta: 4 dormitorios con placard - 2 baños completos - ascensor a P. baja.",
+      "Muy buen estado de conservación."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Apto profesional",
+        "Cantidad plantas: 2",
+        "Cochera cubierta",
+        "Frente del terreno: 10 m",
+        "Largo del terreno: 35 m",
+        "Parrilla"
+      ],
+      "Servicios": [
+        "Ascensor"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Comedor de diario",
+        "Living",
+        "Comedor",
+        "Patio",
+        "Jardín"
+      ]
+    },
+    "fotos": 22,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.4648506932713!2d-58.5617929!3d-34.668215599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d33940601f%3A0x13d02eff49c32f4e!2sColombia%201679%2C%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1680989809840!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "tacuari",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "PH 3 Amb Sin Expensas P. Baja con Patio y Espacio Aereo",
+    "zona": "Ramos Mejía",
+    "direccion": "Tacuarí",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 89000,
+    "expensas": null,
+    "sup_total": 80,
+    "sup_cubierta": 58,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": null,
+    "antiguedad": 50,
+    "extras": [
+      "Luminoso"
+    ],
+    "descripcion": [
+      "PH desarrollado totalmente en planta baja",
+      "Se ingresa por pasillo y cuenta con: patio delantero de acceso, living/comedor, cocina separada con acceso a un 2° patio con lavadero; hall de distribución para acceder al baño completo con bañera y a los 2 dormitorios, de los cuales 1 cuenta con placard."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cantidad de plantas: 1"
+      ],
+      "Servicios": [
+        "Internet/Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Living comedor",
+        "Patio"
+      ]
+    },
+    "fotos": 8,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/u/3/embed?mid=17eZI4l1YG8oVhi8J_r7sEXxkHsdjaF8&ehbc=2E312F"
+  },
+  {
+    "id": "necochea",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Chalet 4 Ambientes, 3 Baños y Garage",
+    "zona": "Ramos Mejía",
+    "direccion": "Necochea",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 99000,
+    "expensas": null,
+    "sup_total": 140,
+    "sup_cubierta": 120,
+    "ambientes": 4,
+    "dormitorios": 3,
+    "banos": 2,
+    "cocheras": 1,
+    "antiguedad": null,
+    "extras": [
+      "1 Toilette",
+      "Muy luminoso"
+    ],
+    "descripcion": [
+      "Chalet 4 amb. en esquina. P. baja: living - comedor - cocina - baño completo - garage - local c/toilette",
+      "Planta alta: 3 cómodos dormitorios con placards - baño completo - patio - lavadero cerrado."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cochera cubierta"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor de diario",
+        "Lavadero",
+        "Living comedor",
+        "Toilette"
+      ]
+    },
+    "fotos": 17,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/embed?mid=1D1BKxjHcSSv95hEqjD7BLZNhpE7Io5Q&hl=es&ehbc=2E312F"
+  },
+  {
+    "id": "piymargall",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "PH Planta Baja 3 Amb en Excelente Zona Residencial",
+    "zona": "Ramos Mejía",
+    "direccion": "Pi y Margall 1837",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 78000,
+    "expensas": 30000,
+    "sup_total": 80,
+    "sup_cubierta": 60,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 1,
+    "antiguedad": 45,
+    "extras": [
+      "Frente",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "PH en venta ubicado en Ramos Mejía, emplazado al frente con orientación noreste. La propiedad cuenta con 60 m² de superficie construida y 80 m² de superficie total distribuidos en una sola planta.",
+      "El ingreso conduce a un living, pasamos a un comedor integrado con la cocina, que dispone de termotanque y espacio de guardado. Presenta 2 dormitorios cómodos y 1 baño completo. Al exterior, ofrece un patio propio y 1 cochera cubierta.",
+      "La propiedad tiene 45 años de antigüedad. Se encuentra en una zona residencial tranquila y consolidada de Ramos Mejía, con acceso a líneas de colectivo locales y comercios de cercanía."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Apto crédito",
+        "Permite mascotas",
+        "Cantidad plantas: 1",
+        "Cochera Cubierta",
+        "Termotanque"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor",
+        "Living comedor",
+        "Lavadero",
+        "Patio"
+      ]
+    },
+    "fotos": 15,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.082062165783!2d-58.56590302425719!3d-34.659775872934226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7d07d1ef06d%3A0xe53ebd5410482c15!2sPi%20y%20Margall%201837%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1788365822899!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "melo",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "PH 2 Amb Impecable Estado con Patio",
+    "zona": "Lomas del Mirador",
+    "direccion": "Melo 557",
+    "barrio": "Lomas del Mirador",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 43000,
+    "expensas": 6000,
+    "sup_total": 43,
+    "sup_cubierta": 35,
+    "ambientes": 2,
+    "dormitorios": 1,
+    "banos": 1,
+    "cocheras": null,
+    "antiguedad": 20,
+    "extras": [
+      "Interno",
+      "Orientación N",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Ingreso por pasillo, PH de 2 ambientes desarrollado en planta baja. Ingresamos a living/comedor con cocina incorporara, separada con barra desayunador y mueble de guardado con puertas. El ambiente cuenta con calefactor de tiro balanceado nuevo.",
+      "La cocina es completa con artefacto de cocina y calefón, ambos con 1 año de uso, bajo mesada ya alacena en madera, patio con salida por ventana balcón, semicubierto, donde está el lavadero.",
+      "Baño completo y 1 dormitorio con placard, aire acondicionado split y amplia baulera",
+      "Su ubicación se halla cerca de medios de transporte, escuelas y comercios de distintos rubros.",
+      "Paga muy bajas expensas, y su estado para habitar de inmediato, hacen de este inmueble la opción ideal para quién busca una propiedad práctica y en buen estado de conservación."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cantidad plantas: 1",
+        "Permite mascotas",
+        "Aire acondicionado"
+      ],
+      "Servicios": [
+        "Internet / Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Living comedor",
+        "Lavadero",
+        "Patio"
+      ]
+    },
+    "fotos": 14,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.6835277732703!2d-58.52909799999999!3d-34.6626945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8f4fb8dc4ed%3A0x4fc69ba1d3080645!2sMelo%20557%2C%20B1752%20Lomas%20del%20Mirador%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1763254725930!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "formosa",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Excelente Chalet 5 Amb con Fondo",
+    "zona": "Lomas del Mirador",
+    "direccion": "Formosa 2875",
+    "barrio": "Lomas del Mirador",
+    "partido": "La Matanza",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 250000,
+    "expensas": null,
+    "sup_total": 406,
+    "sup_cubierta": 290,
+    "ambientes": 6,
+    "dormitorios": 4,
+    "banos": 3,
+    "cocheras": 3,
+    "antiguedad": 20,
+    "extras": [
+      "Muy luminoso"
+    ],
+    "descripcion": [
+      "Excelente chalet en lote de 10 mts por 40,60.",
+      "Se encuentra desarrollado en 3 plantas, contando cada una de las siguientes comodidades, P.B. Frente de reja con retiro, living, comedor y cocina totalmente amueblada con barra divisora, lavadero separado y toilette de generosas medidas. Tiene garage pasante cubierto para 2 autos, amplio patio, jardín en los 2 laterales y piscina, al fondo nos encontramos con un quincho cerrado que posee parrilla, cocina y baño. cochea para varios autos, posee cocina comedor en planta baja, baño cómodo, lavadero, y fondo libre con pileta y quincho con baño.",
+      "P.A. Tenemos un cómodo hall de distribución, 1 baño completo, 3 dormitorios con placard y 1 suite con baño y vestidor.",
+      "En la 2° planta, se encuentra un play room luminoso con ventilación al exterior.",
+      "Todo en perfecto estado de uso y conservación.",
+      "Venta directa! Toman menor valor, inmueble o automóvil, por menos del 50 % del valor del inmueble."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Frente del terreno (mts): 10",
+        "Largo del terreno (mts): 40",
+        "Parrilla",
+        "Pileta",
+        "Sala de juegos"
+      ],
+      "Servicios": [
+        "Internet / Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Altillo",
+        "Balcón",
+        "Cocina",
+        "Comedor",
+        "Dormitorio en suite",
+        "Jardín",
+        "Living",
+        "Patio",
+        "Toilette"
+      ]
+    },
+    "fotos": 27,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13125.795437028297!2d-58.54806447311274!3d-34.66861931728875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc886c93d0d2f%3A0x5dfe3f212dfec036!2sFormosa%202875%2C%20B1752%20Lomas%20del%20Mirador%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1756681471187!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "acevedo",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Impecable PH 3 Amb Al Frente con Cochera Cubierta",
+    "zona": "Lomas del Mirador",
+    "direccion": "Acevedo",
+    "barrio": "Lomas del Mirador",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 69000,
+    "expensas": null,
+    "sup_total": 260,
+    "sup_cubierta": 100,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": null,
+    "cocheras": 1,
+    "antiguedad": 10,
+    "extras": [
+      "Frente",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "PH 3 amb en planta baja al frente en excelente estado",
+      "P. baja: cochera cubierta con portón corredizo automatizado, living/comedor, cocina/comedor con amplio mueble bajo mesada y alacena, baño completo, 2 dormitorios con placard, patio/lavadero cubierto con toldo revatible P. alta: terraza accesible con 2 habitaciones para usos múltiples. toda la propiedad en impecable estado, con acondicionadores de aire frio/calor split en todos los ambientes. Venta directa."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Apto profesional",
+        "Cantidad dormitorios: 2",
+        "Cochera cubierta",
+        "Estado del edificio: Excelente"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "Desagüe cloacal",
+        "Gas natural",
+        "Luz",
+        "Pavimento",
+        "Video cable",
+        "Internet/Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Comedor de diario",
+        "Living",
+        "Living comedor",
+        "Patio",
+        "Terraza"
+      ],
+      "Características": [
+        "Aire acondicionado",
+        "Alarma",
+        "Calefacción",
+        "Placard"
+      ]
+    },
+    "fotos": 18,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/embed?mid=1tGS2UMC4BddUp-wAyQ3OcRwEkVNgf2Hk&ehbc=2E312F"
+  },
+  {
+    "id": "democracia",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Duplex 3 Ambientes con Patio y Cochera Muy Amplio a 6 Cuadras de CABA",
+    "zona": "Lomas del Mirador",
+    "direccion": "Calle de la Democracia 2968",
+    "barrio": "Lomas del Mirador",
+    "partido": "La Matanza",
+    "tipo": "Dúplex",
+    "moneda": "USD",
+    "precio": 78000,
+    "expensas": null,
+    "sup_total": 108,
+    "sup_cubierta": 76,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 1,
+    "antiguedad": null,
+    "extras": [
+      "1 Toilette",
+      "Ancho: 4 m",
+      "Entrada de auto",
+      "Patio con parrilla cubierta"
+    ],
+    "descripcion": [
+      "P. baja: cómoda entrada de auto, living/comedor de 4 x 6, toilette, cocina/comedor amplia con muebles completos y acceso a un amplio patio con lavadero y parrilla techada",
+      "P. alta: 2 dormitorios amplios con placard y baño completo",
+      "La unidad se encuentra en excelente estado de conservación, ideal para habitar en forma inmediata",
+      "A 600 mts de CABA"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Cantidad plantas: 2",
+        "Cobertura cochera: Descubierta",
+        "Frente del terreno (mts): 4",
+        "Largo del terreno (mts): 19",
+        "Parrilla",
+        "Superficie Semicubierta (m²): 7"
+      ],
+      "Servicios": [
+        "Internet / Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Living comedor",
+        "Patio"
+      ],
+      "Características": [
+        "Cocina equipada",
+        "Termotanque"
+      ]
+    },
+    "fotos": 15,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/embed?mid=1kN59RfddV1kK7jEa8w3e2AnIGYZkW_Qo&hl=es&ehbc=2E312F"
+  },
+  {
+    "id": "paso",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Impecable Casa 4 Ambientes con 2 Baños Totalmente Reciclada",
+    "zona": "Lomas del Mirador",
+    "direccion": "Paso 3300",
+    "barrio": "Lomas del Mirador",
+    "partido": "La Matanza",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 170000,
+    "expensas": null,
+    "sup_total": 130,
+    "sup_cubierta": null,
+    "ambientes": 4,
+    "dormitorios": 3,
+    "banos": 2,
+    "cocheras": 1,
+    "antiguedad": 5,
+    "extras": [
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Desarrollada en planta baja consta de hall de recepción, living, cocina completa con isla fija con instalación para lavavajillas, muebles completos y mesada en Silestone.",
+      "3 dormitorios (1 con placard y 1 con vestidor).",
+      "2 baños completos con bañera.",
+      "Patio con jardín.",
+      "Parrilla cubierta, quincho con mesada y cocina.",
+      "Habitación en el fondo para escritorio o cuarto de herramientas.",
+      "Garage."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Cantidad plantas: 1",
+        "Cochera cubierta",
+        "Parrilla",
+        "Aire acondicionado"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor de diario",
+        "Jardín",
+        "Lavadero",
+        "Living",
+        "Terraza"
+      ]
+    },
+    "fotos": 18,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.550034249272!2d-58.52262560000072!3d-34.66606499999893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8f04dd61087%3A0xca48350293cec81c!2sPaso%203300%2C%20B1752BXC%20Lomas%20del%20Mirador%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1651686953676!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "aliciamdj",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Semipiso 3 Amb Al Frente Patio y Terraza Propia (Sin Expensas)",
+    "zona": "Villa Madero",
+    "direccion": "Alicia Moreau De Justo 4850",
+    "barrio": "Villa Madero",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 75000,
+    "expensas": null,
+    "sup_total": 240,
+    "sup_cubierta": 120,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": null,
+    "antiguedad": null,
+    "extras": [
+      "Frente",
+      "Muy luminoso"
+    ],
+    "descripcion": [
+      "1° piso al frente con balcón corrido",
+      "Living/comedor - Cocina/comedor - Baño completo - 2 dormitorios con placard - patio y terraza propia",
+      "Doble entrada",
+      "A modernizar"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Apto profesional",
+        "Cantidad de plantas: 1"
+      ],
+      "Ambientes": [
+        "Comedor de diario",
+        "Living comedor",
+        "Terraza"
+      ]
+    },
+    "fotos": 13,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2232893976143!2d-58.508092884768416!3d-34.67431358044129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9204a168c0d%3A0xeac6affeacec9ad!2sDra.%20Alicia%20Moreau%20de%20Justo%204850%2C%20B1751BNT%20La%20Tablada%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1641610898245!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "buenretiro",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Espectacular Casa en Barrio Privado",
+    "zona": "Pilar",
+    "direccion": "Ruta 25 (entre La Rioja y Corrientes)",
+    "barrio": "Buen Retiro",
+    "partido": "Pilar",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 450000,
+    "expensas": null,
+    "sup_total": 850,
+    "sup_cubierta": 280,
+    "ambientes": 5,
+    "dormitorios": 4,
+    "banos": 3,
+    "cocheras": 2,
+    "antiguedad": null,
+    "extras": [
+      "1 Toilette",
+      "Excelente estado",
+      "Muy luminoso"
+    ],
+    "descripcion": [
+      "Casa de 5 ambientes, más dependencia de servicio.",
+      "Planta baja: entrada presidencial para 3 autos, cochera semi/cubierta para 2 autos, living/comedor, amplia cocina completa, lavadero, comedor diario, toilete, escritorio, quincho cerrado de apróx. 30 m2, habitación de servicio con baño completo. Fondo libre parquizado con quincho de paja semicubierto y piscina de 9x4.",
+      "Planta alta: 3 dormitorios con placard, baño completo, suite con baño y vestidor.",
+      "Estado inmaculado, no hay que hacerle nada.",
+      "En todos los ambientes calefacción por radiadores , y equipos split de frío/calor.",
+      "Edificada en terreno de 850 m²."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cantidad plantas: 2",
+        "Cantidad dormitorios: 4",
+        "Cochera Semicubierta",
+        "Tipo techo: Losa",
+        "Hidromasaje",
+        "Parrilla",
+        "Pileta"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "Desagüe cloacal",
+        "Gas natural",
+        "Luz",
+        "Pavimento",
+        "Video cable",
+        "Teléfono",
+        "Internet / Wifi",
+        "Encargado / Vigilancia"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor",
+        "Dependencia servicio",
+        "Dormitorio en suite",
+        "Escritorio",
+        "Jardín",
+        "Lavadero",
+        "Living comedor",
+        "Toilette",
+        "Vestidor"
+      ],
+      "Características": [
+        "Aire acondicionado",
+        "Calefacción",
+        "Vigilancia"
+      ]
+    },
+    "fotos": 27,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.064875907169!2d-58.87990460135119!3d-34.42510717185601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9da2ba778e13%3A0xc605da2f20603460!2sBuen%20Retiro!5e0!3m2!1ses-419!2sar!4v1641616874051!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "ptederqui",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Ideal Inversor: Centro de Pte. Derqui",
+    "zona": "Pte. Derqui",
+    "direccion": "Av. de Mayo y Sarmiento",
+    "barrio": "Pte. Derqui",
+    "partido": "Pilar",
+    "tipo": "Terreno",
+    "moneda": "USD",
+    "precio": 300000,
+    "expensas": null,
+    "sup_total": 1042,
+    "sup_cubierta": 200,
+    "ambientes": 4,
+    "dormitorios": 3,
+    "banos": null,
+    "cocheras": null,
+    "antiguedad": null,
+    "extras": [],
+    "descripcion": [
+      "Ideal para inversor en el centro de Pte. Derqui ( Pilar), terreno de 1042 m2 con vivienda de 4 amb (200 m2) y piscina."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Superficie del terreno: 1042 mts",
+        "Uso comercial",
+        "Pileta",
+        "Jardín"
+      ],
+      "Servicios": [
+        "Luz",
+        "Pavimento",
+        "Internet / Wifi"
+      ]
+    },
+    "fotos": 4,
+    "video": null,
+    "mapa": "https://www.google.com/maps/d/embed?mid=1Ik8S94YItygYrlnEpTPmklM8Gp8Rir9z&ehbc=2E312F"
+  },
+  {
+    "id": "lamadrid_mdq",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Departamento 2 Amb con Cochera a 2 Cuadras del Mar",
+    "zona": "Mar del Plata",
+    "direccion": "Lamadrid 2300",
+    "barrio": "Centro",
+    "partido": "Mar del Plata",
+    "tipo": "Departamento",
+    "moneda": "USD",
+    "precio": 75000,
+    "expensas": null,
+    "sup_total": 33,
+    "sup_cubierta": null,
+    "ambientes": 2,
+    "dormitorios": 1,
+    "banos": 1,
+    "cocheras": 1,
+    "antiguedad": 40,
+    "extras": [
+      "Interno",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Departamento en edificio con cochera cubierta a 1 cuadra de Av. Colón. Living/comedor, cocina separada, baño instalado completo y 1 dormitorio con placard."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Categoría del edificio: Buena",
+        "Cobertura cochera: Cubierta",
+        "Estado del edificio: Muy bueno",
+        "Tipo edificio: Entre medianeras",
+        "Alrededor del alojamiento: Playa"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "Desagüe cloacal",
+        "Gas natural",
+        "Internet",
+        "Luz",
+        "Pavimento",
+        "Video cable",
+        "Televisión por cable",
+        "Ascensor"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Living comedor"
+      ]
+    },
+    "fotos": 12,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.1327067821594!2d-57.544669224105455!3d-38.00767217192763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc22a45bda15%3A0xeadce4680538595e!2sLamadrid%202300%2C%20Mar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1722870524767!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "basualdo",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Amplia Casa 5 Ambientes a terminar",
+    "zona": "Capital Federal",
+    "direccion": "Basualdo 1200",
+    "barrio": "Mataderos",
+    "partido": "CABA",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 220000,
+    "expensas": null,
+    "sup_total": null,
+    "sup_cubierta": 170,
+    "ambientes": 5,
+    "dormitorios": 4,
+    "banos": 3,
+    "cocheras": 3,
+    "antiguedad": null,
+    "extras": [
+      "Muy luminoso"
+    ],
+    "descripcion": [
+      "Casa en venta ubicada en el barrio de Mataderos, ideal para familias. La propiedad cuenta con 170 m2 de superficie construida y se distribuye en 3 plantas. En su interior, ofrece un amplio living comedor, cocina independiente, 1 dormitorio y 1 baño, 1er nivel a terminar con 3 dormitorios y 2 baños. Además, posee patio, jardín, parrilla, terraza, balcón y lavadero. Dispone de 3 cocheras descubiertas. Orientación SE, muy luminosa y apta para uso profesional.",
+      "El entorno se caracteriza por ser una zona residencial tranquila, con fácil acceso a transporte público y cercanía a diversos comercios y servicios. Encontrará supermercados, farmacias, bancos y colegios en las inmediaciones. Ideal para quienes buscan un hogar cómodo y funcional en un barrio tradicional de Buenos Aires."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Apto profesional",
+        "Cantidad plantas: 3",
+        "Cobertura cochera: Descubierta",
+        "Frente del terreno (mts): 10",
+        "Largo del terreno (mts): 14",
+        "Parrilla"
+      ],
+      "Ambientes": [
+        "Balcón",
+        "Cocina",
+        "Comedor",
+        "Jardín",
+        "Lavadero",
+        "Living comedor",
+        "Patio",
+        "Terraza"
+      ]
+    },
+    "fotos": 32,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.86937270668!2d-58.49305988200762!3d-34.64921363975335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9a75f99d029%3A0x8daad71fb9d006d5!2sBasualdo%201200%2C%20C1440DNR%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1773434879538!5m2!1ses-419!2sar"
+  }
+]

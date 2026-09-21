@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-- Página generada por _build/build.py a partir de data/propiedades.json. No editar a mano. -->
+<html lang="es">
+  <head>
+    <link href="/assets/img/a-de-agostino.ico" type="image/x-icon" rel="shortcut icon" />
+    <title>{{TITULO_PAGINA}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{DESCRIPCION_META}}" />
+    <link rel="canonical" href="{{URL}}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Agostino Propiedades" />
+    <meta property="og:title" content="{{TITULO_PAGINA}}" />
+    <meta property="og:description" content="{{DESCRIPCION_META}}" />
+    <meta property="og:url" content="{{URL}}" />
+    <meta property="og:image" content="{{OG_IMAGEN}}" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container logo-nav-container">
+        <a class="logo" href="/">
+          <img
+            class="logo"
+            src="/assets/img/logosinbordes.png"
+            alt="Logo Agostino"
+            width="100%"
+            height="100%"
+          />
+        </a>
+
+        <span class="menu-icon">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-toggle="collapse"
+            date-target="navCollapse"
+          >
+            Ver Menu
+          </button>
+        </span>
+
+        <nav class="navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/alquileres.html">Alquileres</a></li>
+            <li><a href="/ventas.html">Ventas</a></li>
+            <li><a href="/tasaciones.html">Tasaciones</a></li>
+            <li><a href="/quienessomos.html">Quiénes somos</a></li>
+            <li><a href="/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="cover cover-smaller d-flex justify-content-center p-2"
+      style="background-image:url(/assets/img/full_black.jpg)"
+    >
+      <h2>{{OPERACION}}</h2>
+    </div>
+
+{{CONTENIDO}}
+
+    <!-- PIE DE PAGINA -->
+    <div class="redes">
+      <ul class="sociales">
+        <li>
+          <a
+            href="https://www.instagram.com/agostinopropiedades/"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/ig.png"
+              width="32"
+              height="32"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php/?id=100005778559475"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/fb.png"
+              width="30"
+              height="30"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://wa.me/5491168042437"
+            target="_blank"
+          >
+            <img
+              src="/assets/img/wpp.png"
+              width="32"
+              height="32"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      Av. de Mayo 677, Ramos Mejía <br />
+      011 4658-9800 <br />
+      agostinoprop@yahoo.com.ar <br />
+      <br />
+      &copy; 2026 by NEA
+    </footer>
+    <!-- PIE DE PAGINA -->
+
+    <script type="module">
+      import PhotoSwipeLightbox from "/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js";
+
+      const galeria = document.getElementById("galeria");
+      if (galeria) {
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: "#galeria",
+          children: "a.galeria-item",
+          pswpModule: () => import("/assets/vendor/photoswipe/photoswipe.esm.min.js"),
+          showHideAnimationType: "fade",
+          bgOpacity: 0.92,
+          closeTitle: "Cerrar (Esc)",
+          zoomTitle: "Acercar / alejar",
+          arrowPrevTitle: "Anterior",
+          arrowNextTitle: "Siguiente",
+          errorMsg: "No se pudo cargar la foto",
+          indexIndicatorSep: " / ",
+        });
+        lightbox.init();
+
+        const boton = document.getElementById("galeria-toggle");
+        if (boton) {
+          boton.addEventListener("click", () => {
+            const abierta = galeria.classList.toggle("galeria--todas");
+            boton.textContent = abierta
+              ? "Mostrar menos"
+              : "Ver todas las fotos (" + boton.dataset.total + ")";
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -295,6 +295,204 @@ a:hover {
   letter-spacing: 0.05em;
 }
 
+/* Detalle de propiedad */
+.propiedad-volver {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.propiedad-volver:hover {
+  color: #bd2130;
+}
+
+.propiedad-ubicacion {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.galeria {
+  display: grid;
+  gap: 8px;
+}
+
+.galeria-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #e9ecef;
+  cursor: zoom-in;
+}
+
+.galeria-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.03);
+}
+
+.galeria-mas {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.3rem;
+}
+
+/* Vista compacta: foto principal + hasta 4 miniaturas */
+.galeria:not(.galeria--todas) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.galeria:not(.galeria--todas) .galeria-extra {
+  display: none;
+}
+
+.galeria:not(.galeria--todas) .galeria-item:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 4 / 3;
+}
+
+.galeria:not(.galeria--todas) .galeria-item:not(:first-child) {
+  aspect-ratio: 1 / 1;
+}
+
+.galeria--m0:not(.galeria--todas) { grid-template-columns: 1fr; }
+.galeria--m1:not(.galeria--todas) { grid-template-columns: 1fr; }
+.galeria--m2:not(.galeria--todas) { grid-template-columns: repeat(2, 1fr); }
+.galeria--m3:not(.galeria--todas) { grid-template-columns: repeat(3, 1fr); }
+.galeria--m1:not(.galeria--todas) .galeria-item:not(:first-child) { aspect-ratio: 16 / 9; }
+
+@media (min-width: 768px) {
+  .galeria:not(.galeria--todas) {
+    aspect-ratio: 2 / 1;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .galeria:not(.galeria--todas) .galeria-item:first-child {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    aspect-ratio: auto;
+  }
+
+  .galeria:not(.galeria--todas) .galeria-item:not(:first-child) {
+    aspect-ratio: auto;
+  }
+
+  .galeria--m0:not(.galeria--todas) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    aspect-ratio: 16 / 9;
+  }
+
+  .galeria--m0:not(.galeria--todas) .galeria-item:first-child { grid-row: 1; }
+
+  .galeria--m1:not(.galeria--todas),
+  .galeria--m2:not(.galeria--todas) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .galeria--m1:not(.galeria--todas) .galeria-item:nth-child(2) { grid-row: 1 / 3; }
+
+  .galeria--m3:not(.galeria--todas) {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .galeria--m3:not(.galeria--todas) .galeria-item:nth-child(4) { grid-column: 2 / 4; }
+}
+
+/* Vista completa: todas las fotos en grilla */
+.galeria--todas {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.galeria--todas .galeria-item {
+  aspect-ratio: 4 / 3;
+}
+
+.galeria--todas .galeria-mas {
+  display: none;
+}
+
+.propiedad-resumen {
+  position: sticky;
+  top: 1rem;
+}
+
+.propiedad-operacion {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #666;
+}
+
+.propiedad-precio {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  color: #bd2130;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.propiedad-expensas {
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.propiedad-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.propiedad-datos small {
+  display: block;
+  color: #777;
+  font-size: 0.78rem;
+}
+
+.propiedad-etiquetas span {
+  display: inline-block;
+  background: #f1f3f5;
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.85rem;
+  margin: 0 0.25rem 0.25rem 0;
+}
+
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-caracteristicas li::before {
+  content: "· ";
+  color: #bd2130;
+  font-weight: bold;
+}
+
+.propiedad-nota {
+  font-size: 0.8rem;
+  color: #777;
+}
+
 /* Sección de contacto */
 #contacto .contacto-item {
   font-size: 1.1rem;
