@@ -41,6 +41,16 @@ CARPETAS = {"venta": "ventas", "alquiler": "alquileres"}
 EXTENSIONES = {".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif"}
 
 
+def preparar_foto(fuente, salida, lado=2000):
+    """Achica la foto (sin agrandarla), corrige la rotación, borra los datos ocultos y la guarda como JPEG.
+    fuente puede ser una ruta o un archivo en memoria. Devuelve (ancho, alto)."""
+    with Image.open(fuente) as im:
+        img = ImageOps.exif_transpose(im).convert("RGB")
+    img.thumbnail((lado, lado), Image.LANCZOS)
+    img.save(salida, "JPEG", quality=82, optimize=True, progressive=True)
+    return img.size
+
+
 def clave_natural(nombre):
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", nombre)]
 
@@ -110,15 +120,11 @@ def main():
     numero = len(existentes) + 1
     peso_antes = peso_despues = 0
     for ruta in fotos:
-        with Image.open(ruta) as im:
-            img = ImageOps.exif_transpose(im)
-            img = img.convert("RGB")
-        img.thumbnail((a.lado, a.lado), Image.LANCZOS)  # solo achica, nunca agranda
         salida = os.path.join(destino, f"{numero:02d}.jpg")
-        img.save(salida, "JPEG", quality=82, optimize=True, progressive=True)
+        ancho, alto = preparar_foto(ruta, salida, a.lado)
         peso_antes += os.path.getsize(ruta)
         peso_despues += os.path.getsize(salida)
-        print(f"  {os.path.basename(ruta)} -> {numero:02d}.jpg ({img.width}x{img.height})")
+        print(f"  {os.path.basename(ruta)} -> {numero:02d}.jpg ({ancho}x{alto})")
         numero += 1
 
     total = numero - 1

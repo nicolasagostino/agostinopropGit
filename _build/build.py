@@ -23,9 +23,13 @@ Requiere Pillow:  pip install pillow
 import html
 import json
 import os
+import sys
 import urllib.parse
 
 from PIL import Image, ImageOps
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import validacion  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://agostinoprop.com.ar"
@@ -116,6 +120,27 @@ def listar_fotos(p, carpeta):
         print(f"  AVISO {p['id']}: hay {len(sueltas)} archivos de imagen pero se usan {len(fotos)} "
               f"(deben llamarse 01.jpg, 02.jpg... sin saltear números)")
     return fotos
+
+
+def contar_fotos(p):
+    carpeta = OPERACIONES[p["operacion"]][0]
+    base = os.path.join(RAIZ, "assets", "img", carpeta, p["id"])
+    n = 0
+    while os.path.exists(os.path.join(base, f"{n + 1:02d}.jpg")):
+        n += 1
+    return n
+
+
+def validar_datos(propiedades):
+    """Revisa data/propiedades.json antes de generar. Si hay errores, se detiene con un mensaje claro."""
+    errores, avisos = validacion.validar_todas(propiedades, contar_fotos)
+    for a in avisos:
+        print(f"  AVISO  {a['id']}: {a['mensaje']}")
+    if errores:
+        print("\nNo se generó nada porque hay errores en data/propiedades.json:")
+        for e in errores:
+            print(f"  ERROR  {e['id']} ({e['campo']}): {e['mensaje']}")
+        sys.exit(1)
 
 
 # ---------- página de detalle ----------
@@ -564,6 +589,7 @@ def main():
         base = f.read()
     with open(os.path.join(RAIZ, "data", "opiniones.json"), encoding="utf-8") as f:
         opiniones = json.load(f)
+    validar_datos(propiedades)
 
     cambio = False
     for p in propiedades:

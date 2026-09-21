@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asistente de propiedades</title>
+    <link rel="stylesheet" href="/asistente/asistente.css" />
+  </head>
+  <body>
+    <header class="barra">
+      <div class="barra-in">
+        <h1>Asistente de propiedades</h1>
+        <nav id="nav">
+          <button data-vista="lista">Propiedades</button>
+          <button data-vista="opiniones">Opiniones</button>
+          <button data-vista="publicar">Publicar <span id="pendiente" class="punto" hidden></span></button>
+        </nav>
+        <a class="ver-sitio" href="/" target="_blank" rel="noopener">Ver el sitio &#8599;</a>
+      </div>
+    </header>
+    <main id="app"></main>
+    <div id="avisos" aria-live="polite"></div>
+    <dialog id="dialogo"></dialog>
+    <script src="/asistente/asistente.js"></script>
+  </body>
+</html>

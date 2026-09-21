@@ -13,7 +13,9 @@ Es un sitio estático: no hay servidor ni base de datos. Las páginas se generan
 | Contenido de Home, Tasaciones, Quiénes somos, Contacto y 404 | `_build/paginas/` |
 | Menú, pie de página y estructura común de las páginas | `_build/base.html` |
 | Generador de páginas | `_build/build.py` |
-| Preparar fotos nuevas | `_build/importar_fotos.py` |
+| Asistente para cargar y mantener propiedades | `_build/asistente.py` |
+| Preparar fotos nuevas (por comando) | `_build/importar_fotos.py` |
+| Reglas de validación de los datos | `_build/validacion.py` |
 | Estilos | `style.css` |
 | JS de la galería y de los filtros | `assets/js/` |
 
@@ -25,7 +27,26 @@ Python 3 y Pillow: `pip install pillow` (para fotos `.heic` de iPhone, además `
 
 ## Tareas comunes
 
-### Agregar una propiedad
+### Con el asistente (la forma más fácil)
+
+```
+python _build/asistente.py
+```
+
+Se abre una página en tu navegador (solo funciona en tu computadora mientras la ventana de la terminal esté abierta; se cierra con Ctrl+C). Desde ahí podés:
+
+- **Agregar una propiedad:** arrastrás las fotos (se achican y ordenan solas; la primera es la portada), completás los datos con desplegables y etiquetas para tocar, y a la derecha ves cómo queda la tarjeta y una revisión que te avisa si falta o sobra algo.
+- **Editar una propiedad,** cambiar solo el precio, marcarla como reservada o vendida, o quitarla.
+- **Editar las opiniones de clientes** y el puntaje de Google.
+- **Publicar:** genera las páginas del sitio y te sugiere un mensaje de commit según lo que hiciste.
+
+El asistente guarda una copia de respaldo de los datos cada vez que los modifica (en la carpeta temporal de tu usuario). Al terminar comiteás y subís como siempre.
+
+### A mano (sin el asistente)
+
+Todo lo que hace el asistente se puede hacer editando `data/propiedades.json` y corriendo `python _build/build.py`. El generador **valida los datos antes de generar**: si hay un error (precio mal escrito, identificador repetido, falta la carpeta de fotos...) se detiene y te dice qué propiedad y qué campo corregir.
+
+#### Agregar una propiedad
 
 1. **Fotos.** Poné las fotos originales en una carpeta cualquiera (fuera del repositorio) y ejecutá:
 
@@ -49,15 +70,15 @@ Python 3 y Pillow: `pip install pillow` (para fotos `.heic` de iPhone, además `
 
 5. **Publicar.** Comitear y subir. GitHub Pages actualiza el sitio en un par de minutos.
 
-### Cambiar un dato (precio, texto, etc.)
+#### Cambiar un dato (precio, texto, etc.)
 
 Editar la propiedad en `data/propiedades.json`, correr `python _build/build.py` y comitear.
 
-### Marcar una propiedad como reservada o vendida
+#### Marcar una propiedad como reservada o vendida
 
 Cambiar `estado` a `"reservada"` (aparece con una etiqueta) o `"vendida"` (deja de aparecer en el listado y en el sitemap, pero su página sigue existiendo para los links ya compartidos).
 
-### Quitar una propiedad
+#### Quitar una propiedad
 
 Borrar su registro del JSON, su página (`ventas/ven_<id>.html` o `alquileres/alq_<id>.html`) y su carpeta de fotos. El generador no borra páginas viejas.
 
