@@ -184,7 +184,7 @@ def html_resumen(p):
         f"          {expensas}\n"
         f'          <div class="propiedad-datos">{"".join(filas)}</div>\n'
         f"          {etiquetas}\n"
-        f'          <a class="btn btn-success btn-block mt-3" href="{wa}" target="_blank" rel="noopener">✆ Consultar por WhatsApp</a>\n'
+        f'          <a class="btn btn-success btn-block mt-3" href="{wa}" target="_blank" rel="noopener"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />Consultar por WhatsApp</a>\n'
         '          <a class="btn btn-danger btn-block" href="/contacto.html">Contáctanos</a>\n'
         "        </div>\n"
     )
@@ -401,12 +401,73 @@ def render_listado(operacion, propiedades, base):
     return len(props)
 
 
+# ---------- piezas del Home ----------
+
+def disponibles(propiedades, operacion):
+    return [p for p in propiedades if p["operacion"] == operacion and p["estado"] != "vendida"]
+
+
+def opciones_filtro(props, operacion):
+    moneda, topes = PRECIOS_FILTRO[operacion]
+    return dict(
+        zonas=[[z, z] for z in dict.fromkeys(p["zona"] for p in props)],
+        tipos=[[t, t] for t in sorted(set(p["tipo"] for p in props))],
+        precios=[[str(v), f"Hasta {moneda} {numero(v)}"] for v in topes],
+    )
+
+
+def html_buscador(propiedades):
+    ops = {op: opciones_filtro(disponibles(propiedades, op), op) for op in OPERACIONES if disponibles(propiedades, op)}
+    if not ops:
+        return ""
+    primera = next(iter(ops))
+
+    def select(nombre, etiqueta, opciones):
+        opts = "".join(f'<option value="{esc(v)}">{esc(t)}</option>' for v, t in opciones)
+        return (f'        <div><label for="b-{nombre}">{etiqueta}</label>'
+                f'<select class="form-control" id="b-{nombre}" name="{nombre}">{opts}</select></div>\n')
+
+    d = ops[primera]
+    return (
+        '    <div class="container">\n'
+        f'      <form class="buscador" id="buscador" action="/{OPERACIONES[primera][0]}.html" method="get" '
+        f'data-opciones="{esc(json.dumps(ops, ensure_ascii=False))}">\n'
+        + select("op", "Operación", [[op, OPERACIONES[op][2]] for op in ops])
+        + select("zona", "Zona", [["", "Todas"]] + d["zonas"])
+        + select("tipo", "Tipo", [["", "Todos"]] + d["tipos"])
+        + select("precio", "Precio", [["", "Cualquiera"]] + d["precios"])
+        + '        <button type="submit" class="btn btn-danger">Buscar</button>\n'
+        "      </form>\n"
+        "    </div>"
+    )
+
+
+def html_destacadas(propiedades):
+    # Sin JS se ven 4 repartidas por precio; con JS se eligen 4 al azar en cada visita (assets/js/home.js).
+    props = sorted(disponibles(propiedades, "venta"), key=lambda p: p["precio"])
+    if not props:
+        return ""
+    n = len(props)
+    idx = sorted(set(round(i * (n - 1) / 3) for i in range(4))) if n > 4 else list(range(n))
+    orden = [props[i] for i in idx] + [p for i, p in enumerate(props) if i not in idx]
+    tarjetas = "".join(html_tarjeta(p, i) for i, p in enumerate(orden, 1))
+    return (
+        '    <section id="destacadas">\n'
+        '      <div class="container mt-5 pt-4">\n'
+        '        <div class="seccion-cabeza"><h2>Propiedades destacadas</h2>'
+        '<a href="/ventas.html">Ver todas las propiedades &rarr;</a></div>\n'
+        '        <div class="row" id="destacadas-grilla">\n' + tarjetas + "        </div>\n"
+        "      </div>\n"
+        "    </section>"
+    )
+
+
 # ---------- páginas fijas (Home, Tasaciones, Quiénes somos, Contacto, 404) ----------
 
 def leer_pagina_fija(ruta):
     """Formato del archivo fuente en _build/paginas/:
        ---
-       clave: valor      (archivo, url, titulo, descripcion, imagen, noindex)
+       clave: valor      (archivo, url, titulo, descripcion, imagen, script, noindex)
        ---
        <!-- hero -->      (HTML que va dentro del <header>, debajo del menú)
        <!-- contenido --> (HTML del cuerpo de la página)
@@ -424,7 +485,7 @@ def leer_pagina_fija(ruta):
     return meta
 
 
-def render_paginas_fijas(base):
+def render_paginas_fijas(base, propiedades):
     carpeta = os.path.join(RAIZ, "_build", "paginas")
     publicas = []
     for nombre in sorted(os.listdir(carpeta)):
@@ -440,8 +501,9 @@ def render_paginas_fijas(base):
             HEAD_EXTRA='    <meta name="robots" content="noindex" />\n' if noindex else "",
             DENTRO_HEADER=m["hero"],
             DESPUES_HEADER="",
-            CONTENIDO=m["contenido"],
-            SCRIPTS="",
+            CONTENIDO=m["contenido"].replace("{{BUSCADOR}}", html_buscador(propiedades))
+                                    .replace("{{DESTACADAS}}", html_destacadas(propiedades)),
+            SCRIPTS=f'    <script src="{m["script"]}" defer></script>' if m.get("script") else "",
         ))
         escribir(m["archivo"], salida)
         print(f"OK {m['archivo']}")
@@ -479,7 +541,7 @@ def main():
         n = render_listado(operacion, propiedades, base)
         print(f"OK {OPERACIONES[operacion][0]}.html ({n} propiedades)")
 
-    urls = render_paginas_fijas(base)
+    urls = render_paginas_fijas(base, propiedades)
     urls += [f"/{OPERACIONES[o][0]}.html" for o in OPERACIONES]
     urls += [url_pagina(p) for p in propiedades if p["estado"] != "vendida"]
     escribir_sitemap_y_robots(sorted(dict.fromkeys(urls), key=lambda u: (u != "/", u)))

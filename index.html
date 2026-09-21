@@ -37,132 +37,276 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="topbar">
       <div class="container logo-nav-container">
         <a class="logo" href="/">
-          <img
-            class="logo"
-            src="/assets/img/logosinbordes.png"
-            alt="Logo Agostino"
-            width="100%"
-            height="100%"
-          />
+          <img class="logo" src="/assets/img/logosinbordes.png" alt="Logo Agostino" />
         </a>
-
-        <span class="menu-icon">
-          <button
-            type="button"
-            class="btn btn-danger"
-            data-toggle="collapse"
-            date-target="navCollapse"
-          >
-            Ver Menu
-          </button>
-        </span>
 
         <nav class="navigation">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/ventas.html">Ventas</a></li>
+            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/tasaciones.html">Tasaciones</a></li>
             <li><a href="/quienessomos.html">Quiénes somos</a></li>
             <li><a href="/contacto.html">Contacto</a></li>
           </ul>
         </nav>
+
+        <a class="btn-topbar" href="https://wa.me/5491168042437" target="_blank" rel="noopener"><img src="/assets/img/wpp.png" alt="" /><span>WhatsApp</span></a>
+
+        <span class="menu-icon">
+          <button type="button" class="btn-menu" aria-label="Abrir menú">&#9776;</button>
+        </span>
       </div>
-      <div
-        class="cover d-flex justify-content-center align-items-center flex-column p-5"
-      >
-        <h1>
-          Bienvenido a Agostino Propiedades
-        </h1>
-        <p>
-          Tu inmobiliaria de confianza
-        </p>
-        <div class="hero-actions">
-          <a class="nav-link" href="#servicios">
-            <button class="btn btn-danger">
-              Conoce más
-            </button>
-          </a>
-          <a class="nav-link" href="https://wa.me/5491168042437" target="_blank">
-            <button class="btn btn-success">
-              ✆ WhatsApp
-            </button>
-          </a>
+    </div>
+
+    <header class="header">
+      <div class="hero-home">
+        <div class="container">
+          <h1>Bienvenido a Agostino Propiedades</h1>
+          <p>Tu inmobiliaria de confianza</p>
+          <div class="hero-actions">
+            <a class="btn btn-danger btn-lg" href="/ventas.html">Ver propiedades</a>
+            <a class="btn btn-outline-light btn-lg" href="#servicios">Conocé más</a>
+          </div>
         </div>
       </div>
-    
     </header>
 
+        <div class="container">
+      <form class="buscador" id="buscador" action="/ventas.html" method="get" data-opciones="{&quot;venta&quot;: {&quot;zonas&quot;: [[&quot;Ramos Mejía&quot;, &quot;Ramos Mejía&quot;], [&quot;Lomas del Mirador&quot;, &quot;Lomas del Mirador&quot;], [&quot;Villa Madero&quot;, &quot;Villa Madero&quot;], [&quot;Pilar&quot;, &quot;Pilar&quot;], [&quot;Pte. Derqui&quot;, &quot;Pte. Derqui&quot;], [&quot;Mar del Plata&quot;, &quot;Mar del Plata&quot;], [&quot;Capital Federal&quot;, &quot;Capital Federal&quot;]], &quot;tipos&quot;: [[&quot;Casa&quot;, &quot;Casa&quot;], [&quot;Departamento&quot;, &quot;Departamento&quot;], [&quot;Dúplex&quot;, &quot;Dúplex&quot;], [&quot;PH&quot;, &quot;PH&quot;], [&quot;Terreno&quot;, &quot;Terreno&quot;]], &quot;precios&quot;: [[&quot;50000&quot;, &quot;Hasta U$D 50.000&quot;], [&quot;75000&quot;, &quot;Hasta U$D 75.000&quot;], [&quot;100000&quot;, &quot;Hasta U$D 100.000&quot;], [&quot;150000&quot;, &quot;Hasta U$D 150.000&quot;], [&quot;250000&quot;, &quot;Hasta U$D 250.000&quot;], [&quot;500000&quot;, &quot;Hasta U$D 500.000&quot;]]}, &quot;alquiler&quot;: {&quot;zonas&quot;: [[&quot;Ramos Mejía&quot;, &quot;Ramos Mejía&quot;]], &quot;tipos&quot;: [[&quot;Departamento&quot;, &quot;Departamento&quot;]], &quot;precios&quot;: [[&quot;500000&quot;, &quot;Hasta $ 500.000&quot;], [&quot;800000&quot;, &quot;Hasta $ 800.000&quot;], [&quot;1000000&quot;, &quot;Hasta $ 1.000.000&quot;], [&quot;1500000&quot;, &quot;Hasta $ 1.500.000&quot;], [&quot;2000000&quot;, &quot;Hasta $ 2.000.000&quot;], [&quot;3000000&quot;, &quot;Hasta $ 3.000.000&quot;]]}}">
+        <div><label for="b-op">Operación</label><select class="form-control" id="b-op" name="op"><option value="venta">Venta</option><option value="alquiler">Alquiler</option></select></div>
+        <div><label for="b-zona">Zona</label><select class="form-control" id="b-zona" name="zona"><option value="">Todas</option><option value="Ramos Mejía">Ramos Mejía</option><option value="Lomas del Mirador">Lomas del Mirador</option><option value="Villa Madero">Villa Madero</option><option value="Pilar">Pilar</option><option value="Pte. Derqui">Pte. Derqui</option><option value="Mar del Plata">Mar del Plata</option><option value="Capital Federal">Capital Federal</option></select></div>
+        <div><label for="b-tipo">Tipo</label><select class="form-control" id="b-tipo" name="tipo"><option value="">Todos</option><option value="Casa">Casa</option><option value="Departamento">Departamento</option><option value="Dúplex">Dúplex</option><option value="PH">PH</option><option value="Terreno">Terreno</option></select></div>
+        <div><label for="b-precio">Precio</label><select class="form-control" id="b-precio" name="precio"><option value="">Cualquiera</option><option value="50000">Hasta U$D 50.000</option><option value="75000">Hasta U$D 75.000</option><option value="100000">Hasta U$D 100.000</option><option value="150000">Hasta U$D 150.000</option><option value="250000">Hasta U$D 250.000</option><option value="500000">Hasta U$D 500.000</option></select></div>
+        <button type="submit" class="btn btn-danger">Buscar</button>
+      </form>
+    </div>
+
+        <section id="destacadas">
+      <div class="container mt-5 pt-4">
+        <div class="seccion-cabeza"><h2>Propiedades destacadas</h2><a href="/ventas.html">Ver todas las propiedades &rarr;</a></div>
+        <div class="row" id="destacadas-grilla">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Lomas del Mirador" data-tipo="PH" data-ambientes="2" data-precio="43000" data-superficie="35" data-orden="1">
+            <a class="nav-link" href="/ventas/ven_melo.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="PH 2 Amb Impecable Estado con Patio" style="background-image:url(/assets/img/ventas/melo/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 14</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Lomas del Mirador, La Matanza</h5>
+                  <h5 class="card-title2">U$D 43.000</h5>
+                  <p class="card-text">PH · 35 m² · 2 ambientes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="PH" data-ambientes="3" data-precio="78000" data-superficie="60" data-orden="2">
+            <a class="nav-link" href="/ventas/ven_piymargall.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="PH Planta Baja 3 Amb en Excelente Zona Residencial" style="background-image:url(/assets/img/ventas/piymargall/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 15</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 78.000</h5>
+                  <p class="card-text">PH · 60 m² · 3 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="Dúplex" data-ambientes="4" data-precio="210000" data-superficie="115" data-orden="3">
+            <a class="nav-link" href="/ventas/ven_castillo.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Duplex 4 Amb con entrada de Auto en Excelente Estado" style="background-image:url(/assets/img/ventas/castillo/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 19</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 210.000</h5>
+                  <p class="card-text">Dúplex · 115 m² · 4 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Pilar" data-tipo="Casa" data-ambientes="5" data-precio="450000" data-superficie="280" data-orden="4">
+            <a class="nav-link" href="/ventas/ven_buenretiro.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Espectacular Casa en Barrio Privado" style="background-image:url(/assets/img/ventas/buenretiro/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 27</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Buen Retiro, Pilar</h5>
+                  <h5 class="card-title2">U$D 450.000</h5>
+                  <p class="card-text">Casa · 280 m² · 5 ambientes · 2 cocheras</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="PH" data-ambientes="3" data-precio="67000" data-superficie="56" data-orden="5">
+            <a class="nav-link" href="/ventas/ven_gonzalez_castillo.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="PH 56 m² 3 Ambientes Al Frente en Venta" style="background-image:url(/assets/img/ventas/gonzalez_castillo/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 14</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 67.000</h5>
+                  <p class="card-text">PH · 56 m² · 3 ambientes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Lomas del Mirador" data-tipo="PH" data-ambientes="3" data-precio="69000" data-superficie="100" data-orden="6">
+            <a class="nav-link" href="/ventas/ven_acevedo.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Impecable PH 3 Amb Al Frente con Cochera Cubierta" style="background-image:url(/assets/img/ventas/acevedo/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 18</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Lomas del Mirador, La Matanza</h5>
+                  <h5 class="card-title2">U$D 69.000</h5>
+                  <p class="card-text">PH · 100 m² · 3 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Villa Madero" data-tipo="PH" data-ambientes="3" data-precio="75000" data-superficie="120" data-orden="7">
+            <a class="nav-link" href="/ventas/ven_aliciamdj.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Semipiso 3 Amb Al Frente Patio y Terraza Propia (Sin Expensas)" style="background-image:url(/assets/img/ventas/aliciamdj/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 13</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Villa Madero, La Matanza</h5>
+                  <h5 class="card-title2">U$D 75.000</h5>
+                  <p class="card-text">PH · 120 m² · 3 ambientes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Mar del Plata" data-tipo="Departamento" data-ambientes="2" data-precio="75000" data-superficie="33" data-orden="8">
+            <a class="nav-link" href="/ventas/ven_lamadrid_mdq.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Departamento 2 Amb con Cochera a 2 Cuadras del Mar" style="background-image:url(/assets/img/ventas/lamadrid_mdq/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 12</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Centro, Mar del Plata</h5>
+                  <h5 class="card-title2">U$D 75.000</h5>
+                  <p class="card-text">Departamento · 33 m² · 2 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Lomas del Mirador" data-tipo="Dúplex" data-ambientes="3" data-precio="78000" data-superficie="76" data-orden="9">
+            <a class="nav-link" href="/ventas/ven_democracia.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Duplex 3 Ambientes con Patio y Cochera Muy Amplio a 6 Cuadras de CABA" style="background-image:url(/assets/img/ventas/democracia/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 15</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Lomas del Mirador, La Matanza</h5>
+                  <h5 class="card-title2">U$D 78.000</h5>
+                  <p class="card-text">Dúplex · 76 m² · 3 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="PH" data-ambientes="3" data-precio="89000" data-superficie="58" data-orden="10">
+            <a class="nav-link" href="/ventas/ven_tacuari.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="PH 3 Amb Sin Expensas P. Baja con Patio y Espacio Aereo" style="background-image:url(/assets/img/ventas/tacuari/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 8</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 89.000</h5>
+                  <p class="card-text">PH · 58 m² · 3 ambientes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="Casa" data-ambientes="4" data-precio="99000" data-superficie="120" data-orden="11">
+            <a class="nav-link" href="/ventas/ven_necochea.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Chalet 4 Ambientes, 3 Baños y Garage" style="background-image:url(/assets/img/ventas/necochea/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 17</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 99.000</h5>
+                  <p class="card-text">Casa · 120 m² · 4 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Lomas del Mirador" data-tipo="Casa" data-ambientes="4" data-precio="170000" data-superficie="130" data-orden="12">
+            <a class="nav-link" href="/ventas/ven_paso.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Impecable Casa 4 Ambientes con 2 Baños Totalmente Reciclada" style="background-image:url(/assets/img/ventas/paso/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 18</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Lomas del Mirador, La Matanza</h5>
+                  <h5 class="card-title2">U$D 170.000</h5>
+                  <p class="card-text">Casa · 130 m² · 4 ambientes · 1 cochera</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Capital Federal" data-tipo="Casa" data-ambientes="5" data-precio="220000" data-superficie="170" data-orden="13">
+            <a class="nav-link" href="/ventas/ven_basualdo.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Amplia Casa 5 Ambientes a terminar" style="background-image:url(/assets/img/ventas/basualdo/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 32</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Mataderos, CABA</h5>
+                  <h5 class="card-title2">U$D 220.000</h5>
+                  <p class="card-text">Casa · 170 m² · 5 ambientes · 3 cocheras</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="Casa" data-ambientes="5" data-precio="230000" data-superficie="170" data-orden="14">
+            <a class="nav-link" href="/ventas/ven_colombia.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Casa 5 Ambientes 2 Plantas con Ascensor" style="background-image:url(/assets/img/ventas/colombia/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 22</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
+                  <h5 class="card-title2">U$D 230.000</h5>
+                  <p class="card-text">Casa · 170 m² · 5 ambientes · 3 cocheras</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Lomas del Mirador" data-tipo="Casa" data-ambientes="6" data-precio="250000" data-superficie="290" data-orden="15">
+            <a class="nav-link" href="/ventas/ven_formosa.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Excelente Chalet 5 Amb con Fondo" style="background-image:url(/assets/img/ventas/formosa/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 27</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Lomas del Mirador, La Matanza</h5>
+                  <h5 class="card-title2">U$D 250.000</h5>
+                  <p class="card-text">Casa · 290 m² · 6 ambientes · 3 cocheras</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Pte. Derqui" data-tipo="Terreno" data-ambientes="4" data-precio="300000" data-superficie="200" data-orden="16">
+            <a class="nav-link" href="/ventas/ven_ptederqui.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Ideal Inversor: Centro de Pte. Derqui" style="background-image:url(/assets/img/ventas/ptederqui/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 4</span></div>
+                <div class="card-body">
+                  <h5 class="card-title">Pte. Derqui, Pilar</h5>
+                  <h5 class="card-title2">U$D 300.000</h5>
+                  <p class="card-text">Terreno · 200 m² · 4 ambientes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="servicios">
-      <br>
-      <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/ventas.html">
-              <div class="card">
-                <div
-                  title="Casa"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/casa.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Ventas</h5>
-                  <p class="card-text">
-                    Encontrá la propiedad que se adapte a lo que estás buscando.
-                    <!---
-                    Descubrí las mejores oportunidades de inversión con nuestra amplia variedad de propiedades en venta.
-                    --->
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/alquileres.html">
-              <div class="card">
-                <div
-                  title="Edificio"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/edificio.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Alquileres</h5>
-                  <p class="card-text">
-                    <!---
-                    Encontrá el alquiler que se adapte a lo que estás buscando.
-                    --->
-                    Encontrá el lugar ideal para vivir con nuestras opciones de alquiler.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/tasaciones.html">
-              <div class="card">
-                <div
-                  title="Tasacion"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/tasaciones.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Tasaciones</h5>
-                  <p class="card-text">
-                    <!---
-                    Contáctenos para tasar su propiedad.
-                    --->
-                    Conocé el valor real de tu propiedad con nuestra evaluación profesional y confiable.
-                  </p>
-                </div>
-              
-              </div>
-            </a>
-          </div>
+      <div class="container mt-5 pt-4">
+        <div class="seccion-cabeza"><h2>¿Qué estás buscando?</h2></div>
+        <div class="servicios-tiles">
+          <a class="serv-tile" style="--img: url(/assets/img/casa.jpg)" href="/ventas.html">
+            <div>
+              <h3>Ventas</h3>
+              <p>Encontrá la propiedad que se adapte a lo que estás buscando.</p>
+            </div>
+          </a>
+          <a class="serv-tile" style="--img: url(/assets/img/edificio.jpg)" href="/alquileres.html">
+            <div>
+              <h3>Alquileres</h3>
+              <p>Encontrá el lugar ideal para vivir con nuestras opciones de alquiler.</p>
+            </div>
+          </a>
+          <a class="serv-tile" style="--img: url(/assets/img/tasaciones.jpg)" href="/tasaciones.html">
+            <div>
+              <h3>Tasaciones</h3>
+              <p>Conocé el valor real de tu propiedad con nuestra evaluación profesional y confiable.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -261,54 +405,42 @@
     
 
     <!-- PIE DE PAGINA -->
-    <div class="redes">
-      <ul class="sociales">
-        <li>
-          <a
-            href="https://www.instagram.com/agostinopropiedades/"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/ig.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php/?id=100005778559475"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/fb.png"
-              width="30"
-              height="30"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/5491168042437"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/wpp.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <footer>
-      Av. de Mayo 677, Ramos Mejía <br />
-      011 4658-9800 <br />
-      agostinoprop@yahoo.com.ar <br />
-      <br />
-      &copy; 2026 by NEA
+    <footer class="pie">
+      <div class="container">
+        <div class="pie-cols">
+          <div>
+            <img class="pie-logo" src="/assets/img/logosinbordes.png" alt="Agostino Propiedades" />
+            <p>Tu inmobiliaria de confianza</p>
+            <div class="pie-redes">
+              <a href="https://www.instagram.com/agostinopropiedades/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/img/ig.png" alt="" /></a>
+              <a href="https://www.facebook.com/profile.php/?id=100005778559475" target="_blank" rel="noopener" aria-label="Facebook"><img src="/assets/img/fb.png" alt="" /></a>
+              <a href="https://wa.me/5491168042437" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="/assets/img/wpp.png" alt="" /></a>
+            </div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>Av. de Mayo 677, Ramos Mejía</li>
+              <li>011 4658-9800</li>
+              <li>agostinoprop@yahoo.com.ar</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Horario</h4>
+            <ul>
+              <li>Lunes a Viernes</li>
+              <li>10:00 &ndash; 18:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-legal">&copy; 2026 by NEA</div>
+      </div>
     </footer>
     <!-- PIE DE PAGINA -->
 
+    <a class="wsp-flotante" href="https://wa.me/5491168042437?text=Hola!%20Quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+      <img src="/assets/img/wpp.png" alt="" />
+    </a>
+    <script src="/assets/js/home.js" defer></script>
   </body>
 </html>

@@ -38,40 +38,32 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="topbar">
       <div class="container logo-nav-container">
         <a class="logo" href="/">
-          <img
-            class="logo"
-            src="/assets/img/logosinbordes.png"
-            alt="Logo Agostino"
-            width="100%"
-            height="100%"
-          />
+          <img class="logo" src="/assets/img/logosinbordes.png" alt="Logo Agostino" />
         </a>
-
-        <span class="menu-icon">
-          <button
-            type="button"
-            class="btn btn-danger"
-            data-toggle="collapse"
-            date-target="navCollapse"
-          >
-            Ver Menu
-          </button>
-        </span>
 
         <nav class="navigation">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/ventas.html">Ventas</a></li>
+            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/tasaciones.html">Tasaciones</a></li>
             <li><a href="/quienessomos.html">Quiénes somos</a></li>
             <li><a href="/contacto.html">Contacto</a></li>
           </ul>
         </nav>
+
+        <a class="btn-topbar" href="https://wa.me/5491168042437" target="_blank" rel="noopener"><img src="/assets/img/wpp.png" alt="" /><span>WhatsApp</span></a>
+
+        <span class="menu-icon">
+          <button type="button" class="btn-menu" aria-label="Abrir menú">&#9776;</button>
+        </span>
       </div>
+    </div>
+
+    <header class="header">
 
     </header>
     <div class="cover cover-smaller d-flex justify-content-center p-2"
@@ -120,7 +112,7 @@
           
           <div class="propiedad-datos"><div><small>Tipo</small><strong>Casa</strong></div><div><small>Sup. total</small><strong>170 m²</strong></div><div><small>Ambientes</small><strong>5</strong></div><div><small>Baños</small><strong>3</strong></div><div><small>Cocheras</small><strong>3</strong></div><div><small>Antigüedad</small><strong>70 años</strong></div></div>
           <div class="propiedad-etiquetas"><span>Luminoso</span></div>
-          <a class="btn btn-success btn-block mt-3" href="https://wa.me/5491168042437?text=Hola%21%20Me%20interesa%20la%20propiedad%3A%20Casa%205%20Ambientes%202%20Plantas%20con%20Ascensor%20%28https%3A//agostinoprop.com.ar/ventas/ven_colombia.html%29" target="_blank" rel="noopener">✆ Consultar por WhatsApp</a>
+          <a class="btn btn-success btn-block mt-3" href="https://wa.me/5491168042437?text=Hola%21%20Me%20interesa%20la%20propiedad%3A%20Casa%205%20Ambientes%202%20Plantas%20con%20Ascensor%20%28https%3A//agostinoprop.com.ar/ventas/ven_colombia.html%29" target="_blank" rel="noopener"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />Consultar por WhatsApp</a>
           <a class="btn btn-danger btn-block" href="/contacto.html">Contáctanos</a>
         </div>
         </div>
@@ -158,54 +150,42 @@
     </div>
 
     <!-- PIE DE PAGINA -->
-    <div class="redes">
-      <ul class="sociales">
-        <li>
-          <a
-            href="https://www.instagram.com/agostinopropiedades/"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/ig.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php/?id=100005778559475"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/fb.png"
-              width="30"
-              height="30"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/5491168042437"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/wpp.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <footer>
-      Av. de Mayo 677, Ramos Mejía <br />
-      011 4658-9800 <br />
-      agostinoprop@yahoo.com.ar <br />
-      <br />
-      &copy; 2026 by NEA
+    <footer class="pie">
+      <div class="container">
+        <div class="pie-cols">
+          <div>
+            <img class="pie-logo" src="/assets/img/logosinbordes.png" alt="Agostino Propiedades" />
+            <p>Tu inmobiliaria de confianza</p>
+            <div class="pie-redes">
+              <a href="https://www.instagram.com/agostinopropiedades/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/img/ig.png" alt="" /></a>
+              <a href="https://www.facebook.com/profile.php/?id=100005778559475" target="_blank" rel="noopener" aria-label="Facebook"><img src="/assets/img/fb.png" alt="" /></a>
+              <a href="https://wa.me/5491168042437" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="/assets/img/wpp.png" alt="" /></a>
+            </div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>Av. de Mayo 677, Ramos Mejía</li>
+              <li>011 4658-9800</li>
+              <li>agostinoprop@yahoo.com.ar</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Horario</h4>
+            <ul>
+              <li>Lunes a Viernes</li>
+              <li>10:00 &ndash; 18:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-legal">&copy; 2026 by NEA</div>
+      </div>
     </footer>
     <!-- PIE DE PAGINA -->
+
+    <a class="wsp-flotante" href="https://wa.me/5491168042437?text=Hola!%20Quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+      <img src="/assets/img/wpp.png" alt="" />
+    </a>
     <script type="module" src="/assets/js/galeria.js"></script>
   </body>
 </html>

@@ -2,101 +2,48 @@
 archivo: index.html
 url: /
 imagen: /assets/img/firma.jpg
+script: /assets/js/home.js
 titulo: Agostino Propiedades | Inmobiliaria en Ramos Mejía
 descripcion: Inmobiliaria en Ramos Mejía. Ventas, alquileres y tasaciones de propiedades. Av. de Mayo 677.
 ---
 <!-- hero -->
-      <div
-        class="cover d-flex justify-content-center align-items-center flex-column p-5"
-      >
-        <h1>
-          Bienvenido a Agostino Propiedades
-        </h1>
-        <p>
-          Tu inmobiliaria de confianza
-        </p>
-        <div class="hero-actions">
-          <a class="nav-link" href="#servicios">
-            <button class="btn btn-danger">
-              Conoce más
-            </button>
-          </a>
-          <a class="nav-link" href="https://wa.me/5491168042437" target="_blank">
-            <button class="btn btn-success">
-              ✆ WhatsApp
-            </button>
-          </a>
+      <div class="hero-home">
+        <div class="container">
+          <h1>Bienvenido a Agostino Propiedades</h1>
+          <p>Tu inmobiliaria de confianza</p>
+          <div class="hero-actions">
+            <a class="btn btn-danger btn-lg" href="/ventas.html">Ver propiedades</a>
+            <a class="btn btn-outline-light btn-lg" href="#servicios">Conocé más</a>
+          </div>
         </div>
       </div>
-    
 <!-- contenido -->
+    {{BUSCADOR}}
+
+    {{DESTACADAS}}
+
     <section id="servicios">
-      <br>
-      <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/ventas.html">
-              <div class="card">
-                <div
-                  title="Casa"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/casa.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Ventas</h5>
-                  <p class="card-text">
-                    Encontrá la propiedad que se adapte a lo que estás buscando.
-                    <!---
-                    Descubrí las mejores oportunidades de inversión con nuestra amplia variedad de propiedades en venta.
-                    --->
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/alquileres.html">
-              <div class="card">
-                <div
-                  title="Edificio"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/edificio.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Alquileres</h5>
-                  <p class="card-text">
-                    <!---
-                    Encontrá el alquiler que se adapte a lo que estás buscando.
-                    --->
-                    Encontrá el lugar ideal para vivir con nuestras opciones de alquiler.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a class="nav-link" href="/tasaciones.html">
-              <div class="card">
-                <div
-                  title="Tasacion"
-                  class="cover cover-small"
-                  style="background-image:url(/assets/img/tasaciones.jpg)"
-                ></div>
-                <div class="card-body">
-                  <h5 class="card-title">Tasaciones</h5>
-                  <p class="card-text">
-                    <!---
-                    Contáctenos para tasar su propiedad.
-                    --->
-                    Conocé el valor real de tu propiedad con nuestra evaluación profesional y confiable.
-                  </p>
-                </div>
-              
-              </div>
-            </a>
-          </div>
+      <div class="container mt-5 pt-4">
+        <div class="seccion-cabeza"><h2>¿Qué estás buscando?</h2></div>
+        <div class="servicios-tiles">
+          <a class="serv-tile" style="--img: url(/assets/img/casa.jpg)" href="/ventas.html">
+            <div>
+              <h3>Ventas</h3>
+              <p>Encontrá la propiedad que se adapte a lo que estás buscando.</p>
+            </div>
+          </a>
+          <a class="serv-tile" style="--img: url(/assets/img/edificio.jpg)" href="/alquileres.html">
+            <div>
+              <h3>Alquileres</h3>
+              <p>Encontrá el lugar ideal para vivir con nuestras opciones de alquiler.</p>
+            </div>
+          </a>
+          <a class="serv-tile" style="--img: url(/assets/img/tasaciones.jpg)" href="/tasaciones.html">
+            <div>
+              <h3>Tasaciones</h3>
+              <p>Conocé el valor real de tu propiedad con nuestra evaluación profesional y confiable.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>

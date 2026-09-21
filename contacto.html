@@ -37,40 +37,32 @@
   </head>
 
   <body>
-    <header class="header">
+    <div class="topbar">
       <div class="container logo-nav-container">
         <a class="logo" href="/">
-          <img
-            class="logo"
-            src="/assets/img/logosinbordes.png"
-            alt="Logo Agostino"
-            width="100%"
-            height="100%"
-          />
+          <img class="logo" src="/assets/img/logosinbordes.png" alt="Logo Agostino" />
         </a>
-
-        <span class="menu-icon">
-          <button
-            type="button"
-            class="btn btn-danger"
-            data-toggle="collapse"
-            date-target="navCollapse"
-          >
-            Ver Menu
-          </button>
-        </span>
 
         <nav class="navigation">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/ventas.html">Ventas</a></li>
+            <li><a href="/alquileres.html">Alquileres</a></li>
             <li><a href="/tasaciones.html">Tasaciones</a></li>
             <li><a href="/quienessomos.html">Quiénes somos</a></li>
             <li><a href="/contacto.html">Contacto</a></li>
           </ul>
         </nav>
+
+        <a class="btn-topbar" href="https://wa.me/5491168042437" target="_blank" rel="noopener"><img src="/assets/img/wpp.png" alt="" /><span>WhatsApp</span></a>
+
+        <span class="menu-icon">
+          <button type="button" class="btn-menu" aria-label="Abrir menú">&#9776;</button>
+        </span>
       </div>
+    </div>
+
+    <header class="header">
       <div
         class="cover d-flex justify-content-end align-items-start p-5 flex-column "
         style="background-image:url(/assets/img/pc.jpg)"
@@ -97,7 +89,7 @@
                 <span class="contacto-icon">✉</span> agostinoprop@yahoo.com.ar
               </p>
               <a class="nav-link p-0" href="https://wa.me/5491168042437">
-                <button class="btn btn-success mt-2 mb-4">✆ WhatsApp</button>
+                <button class="btn btn-success mt-2 mb-4"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />WhatsApp</button>
               </a>
 
               <hr />
@@ -157,54 +149,42 @@
     
 
     <!-- PIE DE PAGINA -->
-    <div class="redes">
-      <ul class="sociales">
-        <li>
-          <a
-            href="https://www.instagram.com/agostinopropiedades/"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/ig.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php/?id=100005778559475"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/fb.png"
-              width="30"
-              height="30"
-            />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://wa.me/5491168042437"
-            target="_blank"
-          >
-            <img
-              src="/assets/img/wpp.png"
-              width="32"
-              height="32"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
-    <footer>
-      Av. de Mayo 677, Ramos Mejía <br />
-      011 4658-9800 <br />
-      agostinoprop@yahoo.com.ar <br />
-      <br />
-      &copy; 2026 by NEA
+    <footer class="pie">
+      <div class="container">
+        <div class="pie-cols">
+          <div>
+            <img class="pie-logo" src="/assets/img/logosinbordes.png" alt="Agostino Propiedades" />
+            <p>Tu inmobiliaria de confianza</p>
+            <div class="pie-redes">
+              <a href="https://www.instagram.com/agostinopropiedades/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/img/ig.png" alt="" /></a>
+              <a href="https://www.facebook.com/profile.php/?id=100005778559475" target="_blank" rel="noopener" aria-label="Facebook"><img src="/assets/img/fb.png" alt="" /></a>
+              <a href="https://wa.me/5491168042437" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="/assets/img/wpp.png" alt="" /></a>
+            </div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>Av. de Mayo 677, Ramos Mejía</li>
+              <li>011 4658-9800</li>
+              <li>agostinoprop@yahoo.com.ar</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Horario</h4>
+            <ul>
+              <li>Lunes a Viernes</li>
+              <li>10:00 &ndash; 18:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pie-legal">&copy; 2026 by NEA</div>
+      </div>
     </footer>
     <!-- PIE DE PAGINA -->
+
+    <a class="wsp-flotante" href="https://wa.me/5491168042437?text=Hola!%20Quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+      <img src="/assets/img/wpp.png" alt="" />
+    </a>
 
   </body>
 </html>

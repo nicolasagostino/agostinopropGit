@@ -14,6 +14,15 @@ jQuery('document').ready(function($){
 
   });
 
+  var ruta = location.pathname.replace(/index\.html$/, '');
+  $('.navigation a').each(function () {
+    var destino = this.pathname.replace(/index\.html$/, '');
+    var seccion = destino !== '/' && ruta.indexOf(destino.replace(/\.html$/, '')) === 0;
+    if (destino === ruta || seccion) {
+      $(this).addClass('activa');
+    }
+  });
+
   var form = $('#form-contacto');
   if (form.length) {
     form.on('submit', function (e) {
