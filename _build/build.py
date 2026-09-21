@@ -5,7 +5,10 @@ Uso (desde la raíz del repositorio):
 
 Genera:
 - ventas/ven_<id>.html y alquileres/alq_<id>.html: una página de detalle por propiedad.
-- ventas.html y alquileres.html: los listados (ventas con filtros y orden).
+- ventas.html y alquileres.html: los listados, con filtros y orden.
+- index.html, tasaciones.html, quienessomos.html, contacto.html y 404.html, a partir de
+  los archivos de _build/paginas/ (ahí se edita el contenido de esas páginas).
+- sitemap.xml y robots.txt.
 
 Las fotos se toman de assets/img/<ventas|alquileres>/<id>/01.jpg, 02.jpg, ...
 Se crean miniaturas en .../<id>/thumbs/ (solo si faltan o la foto cambió) y se
@@ -398,6 +401,64 @@ def render_listado(operacion, propiedades, base):
     return len(props)
 
 
+# ---------- páginas fijas (Home, Tasaciones, Quiénes somos, Contacto, 404) ----------
+
+def leer_pagina_fija(ruta):
+    """Formato del archivo fuente en _build/paginas/:
+       ---
+       clave: valor      (archivo, url, titulo, descripcion, imagen, noindex)
+       ---
+       <!-- hero -->      (HTML que va dentro del <header>, debajo del menú)
+       <!-- contenido --> (HTML del cuerpo de la página)
+    """
+    with open(ruta, encoding="utf-8") as f:
+        texto = f.read()
+    _, cabecera, resto = texto.split("---\n", 2)
+    meta = {}
+    for linea in cabecera.strip().splitlines():
+        clave, valor = linea.split(": ", 1)
+        meta[clave.strip()] = valor.strip()
+    hero, contenido = resto.split("<!-- contenido -->", 1)
+    meta["hero"] = hero.replace("<!-- hero -->", "").strip("\n")
+    meta["contenido"] = contenido.strip("\n")
+    return meta
+
+
+def render_paginas_fijas(base):
+    carpeta = os.path.join(RAIZ, "_build", "paginas")
+    publicas = []
+    for nombre in sorted(os.listdir(carpeta)):
+        if not nombre.endswith(".html"):
+            continue
+        m = leer_pagina_fija(os.path.join(carpeta, nombre))
+        noindex = m.get("noindex") == "si"
+        salida = pagina(base, dict(
+            TITULO=esc(m["titulo"]),
+            DESCRIPCION=esc(m["descripcion"]),
+            URL=DOMINIO + m["url"],
+            OG_IMAGEN=DOMINIO + m["imagen"],
+            HEAD_EXTRA='    <meta name="robots" content="noindex" />\n' if noindex else "",
+            DENTRO_HEADER=m["hero"],
+            DESPUES_HEADER="",
+            CONTENIDO=m["contenido"],
+            SCRIPTS="",
+        ))
+        escribir(m["archivo"], salida)
+        print(f"OK {m['archivo']}")
+        if not noindex:
+            publicas.append(m["url"])
+    return publicas
+
+
+def escribir_sitemap_y_robots(urls):
+    filas = "".join(f"  <url><loc>{DOMINIO}{u}</loc></url>\n" for u in urls)
+    escribir("sitemap.xml",
+             '<?xml version="1.0" encoding="UTF-8"?>\n'
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + filas + "</urlset>\n")
+    escribir("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {DOMINIO}/sitemap.xml\n")
+    print(f"OK sitemap.xml ({len(urls)} páginas) y robots.txt")
+
+
 def main():
     ruta_json = os.path.join(RAIZ, "data", "propiedades.json")
     with open(ruta_json, encoding="utf-8") as f:
@@ -417,6 +478,11 @@ def main():
     for operacion in OPERACIONES:
         n = render_listado(operacion, propiedades, base)
         print(f"OK {OPERACIONES[operacion][0]}.html ({n} propiedades)")
+
+    urls = render_paginas_fijas(base)
+    urls += [f"/{OPERACIONES[o][0]}.html" for o in OPERACIONES]
+    urls += [url_pagina(p) for p in propiedades if p["estado"] != "vendida"]
+    escribir_sitemap_y_robots(sorted(dict.fromkeys(urls), key=lambda u: (u != "/", u)))
 
     if cambio:
         with open(ruta_json, "w", encoding="utf-8", newline="\n") as f:

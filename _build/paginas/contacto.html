@@ -1,0 +1,91 @@
+---
+archivo: contacto.html
+url: /contacto.html
+imagen: /assets/img/pc.jpg
+titulo: Contacto | Agostino Propiedades
+descripcion: Contactá a Agostino Propiedades: teléfono 011 4658-9800, WhatsApp y formulario. Av. de Mayo 677, Ramos Mejía. Lunes a viernes de 10 a 18.
+---
+<!-- hero -->
+      <div
+        class="cover d-flex justify-content-end align-items-start p-5 flex-column "
+        style="background-image:url(/assets/img/pc.jpg)"
+      >
+        <h1>
+          Contacto
+        </h1>
+      </div>
+    
+<!-- contenido -->
+    <section id="contacto">
+      <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+
+          <div class="col-12 col-lg-5 mb-4">
+            <div class="card h-100 p-4">
+              <h4 class="mb-4">Contactanos</h4>
+
+              <p class="contacto-item">
+                <span class="contacto-icon">☎</span> 011 4658-9800
+              </p>
+              <p class="contacto-item">
+                <span class="contacto-icon">✉</span> agostinoprop@yahoo.com.ar
+              </p>
+              <a class="nav-link p-0" href="https://wa.me/5491168042437">
+                <button class="btn btn-success mt-2 mb-4">✆ WhatsApp</button>
+              </a>
+
+              <hr />
+
+              <h5 class="mt-3 mb-3">Aquí nos encuentran</h5>
+              <p class="card-contacto">Av. de Mayo 677 - Ramos Mejía</p>
+              <div class="responsive-iframe mb-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6564.4368176286!2d-58.56906456821527!3d-34.64918672377837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e6362ddf77%3A0xb4197ecc5d826dee!2sAgostino%20Propiedades!5e0!3m2!1ses-419!2sar!4v1616604311174!5m2!1ses-419!2sar"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <p class="card-contacto mb-0">
+                Horario:<br />
+                Lunes a Viernes 10:00 – 18:00
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 mb-4">
+            <div class="card h-100 p-4">
+              <h4 class="mb-4">Escribinos</h4>
+              <form id="form-contacto" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d3e34607-8743-4a80-a8c0-79806ddb0011" />
+                <input type="hidden" name="subject" value="Nuevo mensaje desde agostinoprop.com.ar" />
+                <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" />
+
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" class="form-control" id="name" name="Nombre" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" class="form-control" id="phone" name="Telefono" />
+                </div>
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea class="form-control" id="message" name="Mensaje" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-danger btn-block">Enviar</button>
+                <div id="form-status" class="mt-3"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    

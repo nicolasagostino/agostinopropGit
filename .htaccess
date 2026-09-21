@@ -1,4 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www*.agostinoprop\.com.ar [NC]
-RewriteRule ^(.*)$ https://agostinoprop.com.ar/$1 [L,R=301,NC]
