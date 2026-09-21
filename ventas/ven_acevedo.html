@@ -3,10 +3,10 @@
 <html lang="es">
   <head>
     <link href="/assets/img/a-de-agostino.ico" type="image/x-icon" rel="shortcut icon" />
-    <title>Impecable PH 3 Amb Al Frente con Cochera Cubierta | Agostino Propiedades</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Impecable PH 3 Amb Al Frente con Cochera Cubierta | Agostino Propiedades</title>
     <meta name="description" content="Impecable PH 3 Amb Al Frente con Cochera Cubierta - Lomas del Mirador, La Matanza. U$D 69.000. Agostino Propiedades, Ramos Mejía." />
     <link rel="canonical" href="https://agostinoprop.com.ar/ventas/ven_acevedo.html" />
 
@@ -72,15 +72,12 @@
           </ul>
         </nav>
       </div>
-    </header>
 
-    <div
-      class="cover cover-smaller d-flex justify-content-center p-2"
-      style="background-image:url(/assets/img/full_black.jpg)"
-    >
+    </header>
+    <div class="cover cover-smaller d-flex justify-content-center p-2"
+         style="background-image:url(/assets/img/full_black.jpg)">
       <h2>Venta</h2>
     </div>
-
     <div class="container mt-4 mb-5">
       <a class="propiedad-volver" href="/ventas.html">&larr; Volver a ventas</a>
       <h1 class="h2 mt-3">Impecable PH 3 Amb Al Frente con Cochera Cubierta</h1>
@@ -210,37 +207,6 @@
       &copy; 2026 by NEA
     </footer>
     <!-- PIE DE PAGINA -->
-
-    <script type="module">
-      import PhotoSwipeLightbox from "/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js";
-
-      const galeria = document.getElementById("galeria");
-      if (galeria) {
-        const lightbox = new PhotoSwipeLightbox({
-          gallery: "#galeria",
-          children: "a.galeria-item",
-          pswpModule: () => import("/assets/vendor/photoswipe/photoswipe.esm.min.js"),
-          showHideAnimationType: "fade",
-          bgOpacity: 0.92,
-          closeTitle: "Cerrar (Esc)",
-          zoomTitle: "Acercar / alejar",
-          arrowPrevTitle: "Anterior",
-          arrowNextTitle: "Siguiente",
-          errorMsg: "No se pudo cargar la foto",
-          indexIndicatorSep: " / ",
-        });
-        lightbox.init();
-
-        const boton = document.getElementById("galeria-toggle");
-        if (boton) {
-          boton.addEventListener("click", () => {
-            const abierta = galeria.classList.toggle("galeria--todas");
-            boton.textContent = abierta
-              ? "Mostrar menos"
-              : "Ver todas las fotos (" + boton.dataset.total + ")";
-          });
-        }
-      }
-    </script>
+    <script type="module" src="/assets/js/galeria.js"></script>
   </body>
 </html>

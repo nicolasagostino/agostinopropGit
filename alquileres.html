@@ -1,17 +1,22 @@
 <!DOCTYPE html>
+<!-- Página generada por _build/build.py a partir de data/propiedades.json. No editar a mano. -->
 <html lang="es">
   <head>
     <link href="/assets/img/a-de-agostino.ico" type="image/x-icon" rel="shortcut icon" />
-    <!-- Cosas importantes pero no visibles en la pagina web-->
-    <!-- Titulo en la pestaña -->
-    <title>Agostino Propiedades</title>
-    <!-- Simbolos como la ñ entre otros -->
     <meta charset="utf-8" />
-    <!-- Compatibilidad con versiones viejas de Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Para que se vea bien en celulares -->
-    <meta name="viewport" content="with=device-with, initial-scale=1" />
-    <!--- Fuente de Google Fonts-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alquileres | Agostino Propiedades</title>
+    <meta name="description" content="Propiedades en alquiler de Agostino Propiedades, inmobiliaria de Ramos Mejía." />
+    <link rel="canonical" href="https://agostinoprop.com.ar/alquileres.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Agostino Propiedades" />
+    <meta property="og:title" content="Alquileres | Agostino Propiedades" />
+    <meta property="og:description" content="Propiedades en alquiler de Agostino Propiedades, inmobiliaria de Ramos Mejía." />
+    <meta property="og:url" content="https://agostinoprop.com.ar/alquileres.html" />
+    <meta property="og:image" content="https://agostinoprop.com.ar/assets/img/edificio.jpg" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans&display=swap"
@@ -25,12 +30,12 @@
       crossorigin="anonymous"
     />
 
-    <!-- Link con el archivo css -->
     <link rel="stylesheet" href="/style.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
   </head>
+
   <body>
     <header class="header">
       <div class="container logo-nav-container">
@@ -58,75 +63,64 @@
         <nav class="navigation">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="alquileres.html">Alquileres</a></li>
-            <li><a href="ventas.html">Ventas</a></li>
-            <li><a href="tasaciones.html">Tasaciones</a></li>
-            <li><a href="quienessomos.html">Quiénes somos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="/alquileres.html">Alquileres</a></li>
+            <li><a href="/ventas.html">Ventas</a></li>
+            <li><a href="/tasaciones.html">Tasaciones</a></li>
+            <li><a href="/quienessomos.html">Quiénes somos</a></li>
+            <li><a href="/contacto.html">Contacto</a></li>
           </ul>
         </nav>
-        <br />
       </div>
-      <div
-        class="cover d-flex justify-content-end align-items-start p-5 flex-column "
-        style="background-image:url(/assets/img/edificio.jpg)"
-      >
-        <h1>
-          Alquileres
-        </h1>
+      <div class="cover d-flex justify-content-end align-items-start p-5 flex-column" style="background-image: url(/assets/img/edificio.jpg);">
+        <h1>Alquileres</h1>
       </div>
     </header>
 
     <section id="alquileres">
       <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-          
-  
-      <!---     DESCOMENTAR LO DE ABAJO SI NO HAY PROPIEDADES EN ALQUILER --->
-
-        
-      <!---     
-    <section id="advertencia">
-      <div class="container mt-5 mb-5">
-    
-        <div class="alert alert-danger"><center><strong> Por el momento no contamos con propiedades en alquiler disponibles. Podés volver a consultar en los próximos días o contactarnos para avisarte apenas ingrese una nueva opción. </strong></center></div>
-      </div>
-    </section>
- 
-            --->
-
-
-          
-
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <a
-              class="nav-link"
-              href="/alquileres/alq_lasheras.html"
-              target="_blank"
-            >
-              <div class="card">
-                <div
-                  title="Departamento 3 Ambientes Las Heras"
-                  class="cover cover-small" 
-                  style="background-image:url(/assets/img/lasheras_ppal.jpg)"
-                ></div>
+      <form id="filtros" class="filtros" autocomplete="off">
+        <div class="form-row">
+        <div class="form-group col-6 col-md">
+          <label for="f-zona">Zona</label>
+          <select class="form-control" id="f-zona" name="zona"><option value="">Todas</option><option value="Ramos Mejía">Ramos Mejía</option></select>
+        </div>
+        <div class="form-group col-6 col-md">
+          <label for="f-tipo">Tipo</label>
+          <select class="form-control" id="f-tipo" name="tipo"><option value="">Todos</option><option value="Departamento">Departamento</option></select>
+        </div>
+        <div class="form-group col-6 col-md">
+          <label for="f-ambientes">Ambientes</label>
+          <select class="form-control" id="f-ambientes" name="ambientes"><option value="">Cualquiera</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 o más</option></select>
+        </div>
+        <div class="form-group col-6 col-md">
+          <label for="f-precio">Precio</label>
+          <select class="form-control" id="f-precio" name="precio"><option value="">Cualquiera</option><option value="500000">Hasta $ 500.000</option><option value="800000">Hasta $ 800.000</option><option value="1000000">Hasta $ 1.000.000</option><option value="1500000">Hasta $ 1.500.000</option><option value="2000000">Hasta $ 2.000.000</option><option value="3000000">Hasta $ 3.000.000</option></select>
+        </div>
+        <div class="form-group col-12 col-md">
+          <label for="f-orden">Ordenar por</label>
+          <select class="form-control" id="f-orden" name="orden"><option value="precio-asc">Precio: menor a mayor</option><option value="precio-desc">Precio: mayor a menor</option><option value="amb-desc">Más ambientes</option><option value="amb-asc">Menos ambientes</option><option value="sup-desc">Mayor superficie</option></select>
+        </div>
+        </div>
+        <div class="filtros-pie">
+          <span id="contador" aria-live="polite"></span>
+          <button type="button" class="btn btn-link js-limpiar">Limpiar filtros</button>
+        </div>
+      </form>
+      <div class="row" id="grilla">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="Ramos Mejía" data-tipo="Departamento" data-ambientes="3" data-precio="1600000" data-superficie="110" data-orden="1">
+            <a class="nav-link" href="/alquileres/alq_lasheras.html" target="_blank" rel="noopener">
+              <div class="card h-100">
+                <div class="cover cover-small" role="img" aria-label="Impecable Depto. 3 Amb Con Cochera Cubierta" style="background-image:url(/assets/img/alquileres/lasheras/thumbs/01.jpg)"><span class="tarjeta-fotos">&#128247; 25</span></div>
                 <div class="card-body">
-                  <h5 class="card-title">Ramos Mejía, La Matanza</h5> 
+                  <h5 class="card-title">Ramos Mejía, La Matanza</h5>
                   <h5 class="card-title2">$ 1.600.000</h5>
-                  <p class="card-text">
-                    Departamento · 115 m² · 3 ambientes · Cochera
-                  </p>
-                  
+                  <p class="card-text">Departamento · 110 m² · 3 ambientes · 1 cochera</p>
                 </div>
               </div>
             </a>
           </div>
-
-
-          
-          
-
-        </div>
+      </div>
+      <div class="alert alert-info text-center" id="sin-resultados" hidden>No hay propiedades con esos filtros. <button type="button" class="btn btn-link p-0 align-baseline js-limpiar">Limpiar filtros</button></div>
       </div>
     </section>
 
@@ -158,13 +152,6 @@
           </a>
         </li>
         <li>
-
-         <!--
-          <a
-            href="https://api.whatsapp.com/send?phone=+5491168042437"
-            target="_blank"
-          >
-          -->
           <a
             href="https://wa.me/5491168042437"
             target="_blank"
@@ -186,5 +173,6 @@
       &copy; 2026 by NEA
     </footer>
     <!-- PIE DE PAGINA -->
+    <script src="/assets/js/listado.js" defer></script>
   </body>
 </html>

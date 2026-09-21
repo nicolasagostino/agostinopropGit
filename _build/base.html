@@ -3,17 +3,17 @@
 <html lang="es">
   <head>
     <link href="/assets/img/a-de-agostino.ico" type="image/x-icon" rel="shortcut icon" />
-    <title>{{TITULO_PAGINA}}</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="{{DESCRIPCION_META}}" />
+    <title>{{TITULO}}</title>
+    <meta name="description" content="{{DESCRIPCION}}" />
     <link rel="canonical" href="{{URL}}" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Agostino Propiedades" />
-    <meta property="og:title" content="{{TITULO_PAGINA}}" />
-    <meta property="og:description" content="{{DESCRIPCION_META}}" />
+    <meta property="og:title" content="{{TITULO}}" />
+    <meta property="og:description" content="{{DESCRIPCION}}" />
     <meta property="og:url" content="{{URL}}" />
     <meta property="og:image" content="{{OG_IMAGEN}}" />
 
@@ -31,8 +31,7 @@
     />
 
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css" />
-
+{{HEAD_EXTRA}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/scripts.js"></script>
   </head>
@@ -72,15 +71,9 @@
           </ul>
         </nav>
       </div>
+{{DENTRO_HEADER}}
     </header>
-
-    <div
-      class="cover cover-smaller d-flex justify-content-center p-2"
-      style="background-image:url(/assets/img/full_black.jpg)"
-    >
-      <h2>{{OPERACION}}</h2>
-    </div>
-
+{{DESPUES_HEADER}}
 {{CONTENIDO}}
 
     <!-- PIE DE PAGINA -->
@@ -132,37 +125,6 @@
       &copy; 2026 by NEA
     </footer>
     <!-- PIE DE PAGINA -->
-
-    <script type="module">
-      import PhotoSwipeLightbox from "/assets/vendor/photoswipe/photoswipe-lightbox.esm.min.js";
-
-      const galeria = document.getElementById("galeria");
-      if (galeria) {
-        const lightbox = new PhotoSwipeLightbox({
-          gallery: "#galeria",
-          children: "a.galeria-item",
-          pswpModule: () => import("/assets/vendor/photoswipe/photoswipe.esm.min.js"),
-          showHideAnimationType: "fade",
-          bgOpacity: 0.92,
-          closeTitle: "Cerrar (Esc)",
-          zoomTitle: "Acercar / alejar",
-          arrowPrevTitle: "Anterior",
-          arrowNextTitle: "Siguiente",
-          errorMsg: "No se pudo cargar la foto",
-          indexIndicatorSep: " / ",
-        });
-        lightbox.init();
-
-        const boton = document.getElementById("galeria-toggle");
-        if (boton) {
-          boton.addEventListener("click", () => {
-            const abierta = galeria.classList.toggle("galeria--todas");
-            boton.textContent = abierta
-              ? "Mostrar menos"
-              : "Ver todas las fotos (" + boton.dataset.total + ")";
-          });
-        }
-      }
-    </script>
+{{SCRIPTS}}
   </body>
 </html>

@@ -1,13 +1,18 @@
-"""Genera las páginas de detalle de cada propiedad a partir de data/propiedades.json.
+"""Genera las páginas del sitio que salen de data/propiedades.json.
 
 Uso (desde la raíz del repositorio):
     python _build/build.py
 
-- Lee data/propiedades.json y la plantilla _build/plantilla_propiedad.html.
-- Escribe ventas/ven_<id>.html (y alquileres/alq_<id>.html para operacion "alquiler").
-- Las fotos se toman de assets/img/<ventas|alquileres>/<id>/01.jpg, 02.jpg, ...
-  y se crean miniaturas en .../<id>/thumbs/ (solo si faltan o la foto cambió).
-- Sincroniza el campo "fotos" del JSON con la cantidad real de fotos en la carpeta.
+Genera:
+- ventas/ven_<id>.html y alquileres/alq_<id>.html: una página de detalle por propiedad.
+- ventas.html y alquileres.html: los listados (ventas con filtros y orden).
+
+Las fotos se toman de assets/img/<ventas|alquileres>/<id>/01.jpg, 02.jpg, ...
+Se crean miniaturas en .../<id>/thumbs/ (solo si faltan o la foto cambió) y se
+sincroniza el campo "fotos" del JSON con la cantidad real de fotos de la carpeta.
+
+Las páginas generadas no se editan a mano: se cambia el JSON o las plantillas
+(_build/base.html) y se vuelve a correr este script.
 
 Requiere Pillow:  pip install pillow
 """
@@ -22,10 +27,16 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMINIO = "https://agostinoprop.com.ar"
 WHATSAPP = "5491168042437"
 LADO_MINIATURA = 600
+# Rangos del filtro de precio (moneda, tope de cada opción). Ajustar si cambian los precios del mercado.
+PRECIOS_FILTRO = {
+    "venta": ("U$D", [50000, 75000, 100000, 150000, 250000, 500000]),
+    "alquiler": ("$", [500000, 800000, 1000000, 1500000, 2000000, 3000000]),
+}
 
+# operacion -> (carpeta, prefijo de archivo, etiqueta, título del listado, imagen del listado)
 OPERACIONES = {
-    "venta": ("ventas", "ven_", "Venta"),
-    "alquiler": ("alquileres", "alq_", "Alquiler"),
+    "venta": ("ventas", "ven_", "Venta", "Ventas", "/assets/img/ventas.jpg"),
+    "alquiler": ("alquileres", "alq_", "Alquiler", "Alquileres", "/assets/img/edificio.jpg"),
 }
 
 NOTA_COTI = (
@@ -36,6 +47,8 @@ NOTA_COTI = (
 
 esc = html.escape
 
+
+# ---------- utilidades ----------
 
 def numero(n):
     return f"{n:,}".replace(",", ".")
@@ -48,6 +61,29 @@ def precio(p):
 def anios(n):
     return "1 año" if n == 1 else f"{n} años"
 
+
+def plural(n, singular, plural_):
+    return f"{n} {singular if n == 1 else plural_}"
+
+
+def url_pagina(p):
+    carpeta, prefijo = OPERACIONES[p["operacion"]][:2]
+    return f"/{carpeta}/{prefijo}{p['id']}.html"
+
+
+def pagina(base, campos):
+    for clave, valor in campos.items():
+        base = base.replace("{{" + clave + "}}", valor)
+    return base
+
+
+def escribir(ruta_relativa, contenido):
+    ruta = os.path.join(RAIZ, ruta_relativa)
+    with open(ruta, "w", encoding="utf-8", newline="\n") as f:
+        f.write(contenido)
+
+
+# ---------- fotos ----------
 
 def listar_fotos(p, carpeta):
     base = os.path.join(RAIZ, "assets", "img", carpeta, p["id"])
@@ -78,6 +114,8 @@ def listar_fotos(p, carpeta):
     return fotos
 
 
+# ---------- página de detalle ----------
+
 def html_galeria(p, fotos):
     n = len(fotos)
     if n == 0:
@@ -105,9 +143,7 @@ def html_galeria(p, fotos):
             f"Ver todas las fotos ({n})</button>\n"
             "      </div>\n"
         )
-    return (
-        f'      <div class="galeria galeria--m{m}" id="galeria">\n' + "\n".join(items) + "\n      </div>\n" + boton
-    )
+    return f'      <div class="galeria galeria--m{m}" id="galeria">\n' + "\n".join(items) + "\n      </div>\n" + boton
 
 
 def html_resumen(p):
@@ -134,8 +170,7 @@ def html_resumen(p):
     if p["estado"] != "disponible":
         estado = f'<div class="alert alert-danger text-center mb-3"><strong>{esc(p["estado"].upper())}</strong></div>'
 
-    url = f"{DOMINIO}/{OPERACIONES[p['operacion']][0]}/{OPERACIONES[p['operacion']][1]}{p['id']}.html"
-    texto = f"Hola! Me interesa la propiedad: {p['titulo']} ({url})"
+    texto = f"Hola! Me interesa la propiedad: {p['titulo']} ({DOMINIO}{url_pagina(p)})"
     wa = f"https://wa.me/{WHATSAPP}?text={urllib.parse.quote(texto)}"
 
     return (
@@ -167,12 +202,10 @@ def html_caracteristicas(p):
     return '        <div class="row mt-4">\n' + "".join(tarjetas) + "        </div>\n" if tarjetas else ""
 
 
-def render(p, plantilla):
-    carpeta, prefijo, etiqueta_op = OPERACIONES[p["operacion"]]
+def render_detalle(p, base):
+    carpeta, prefijo, etiqueta_op = OPERACIONES[p["operacion"]][:3]
     fotos = listar_fotos(p, carpeta)
-    url = f"{DOMINIO}/{carpeta}/{prefijo}{p['id']}.html"
     ubicacion = f"{p['direccion']}, {p['barrio']}, {p['partido']}"
-
     desc_meta = f"{p['titulo']} - {p['barrio']}, {p['partido']}. {precio(p)}. Agostino Propiedades, Ramos Mejía."
     parrafos = "".join(f"        <p>{esc(x)}</p>\n" for x in p["descripcion"])
     mapa = ""
@@ -205,42 +238,191 @@ def render(p, plantilla):
         "      </div>\n"
         "    </div>"
     )
-
-    salida = (
-        plantilla.replace("{{TITULO_PAGINA}}", esc(f"{p['titulo']} | Agostino Propiedades"))
-        .replace("{{DESCRIPCION_META}}", esc(desc_meta))
-        .replace("{{URL}}", url)
-        .replace("{{OG_IMAGEN}}", DOMINIO + fotos[0]["url"] if fotos else "")
-        .replace("{{OPERACION}}", etiqueta_op)
-        .replace("{{CONTENIDO}}", contenido)
+    barra = (
+        '    <div class="cover cover-smaller d-flex justify-content-center p-2"\n'
+        '         style="background-image:url(/assets/img/full_black.jpg)">\n'
+        f"      <h2>{etiqueta_op}</h2>\n"
+        "    </div>"
     )
-    ruta = os.path.join(RAIZ, carpeta, f"{prefijo}{p['id']}.html")
-    with open(ruta, "w", encoding="utf-8", newline="\n") as f:
-        f.write(salida)
-    return ruta, len(fotos)
+    salida = pagina(base, dict(
+        TITULO=esc(f"{p['titulo']} | Agostino Propiedades"),
+        DESCRIPCION=esc(desc_meta),
+        URL=DOMINIO + url_pagina(p),
+        OG_IMAGEN=DOMINIO + fotos[0]["url"] if fotos else "",
+        HEAD_EXTRA='    <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css" />\n',
+        DENTRO_HEADER="",
+        DESPUES_HEADER=barra,
+        CONTENIDO=contenido,
+        SCRIPTS='    <script type="module" src="/assets/js/galeria.js"></script>',
+    ))
+    escribir(url_pagina(p).lstrip("/"), salida)
+    return len(fotos)
+
+
+# ---------- listados ----------
+
+def linea_resumen(p):
+    partes = [p["tipo"]]
+    sup = p["sup_cubierta"] or p["sup_total"]
+    if sup:
+        partes.append(f"{sup} m²")
+    if p["ambientes"]:
+        partes.append(plural(p["ambientes"], "ambiente", "ambientes"))
+    if p["cocheras"]:
+        partes.append(plural(p["cocheras"], "cochera", "cocheras"))
+    return " · ".join(partes)
+
+
+def html_tarjeta(p, orden):
+    sup = p["sup_cubierta"] or p["sup_total"] or 0
+    estado = ""
+    if p["estado"] != "disponible":
+        estado = f'<span class="tarjeta-estado">{esc(p["estado"])}</span>'
+    portada = f"/assets/img/{OPERACIONES[p['operacion']][0]}/{p['id']}/thumbs/01.jpg"
+    cant_fotos = f'<span class="tarjeta-fotos">&#128247; {p["fotos"]}</span>' if p.get("fotos") else ""
+    return (
+        f'          <div class="col-12 col-sm-6 col-md-4 col-lg-3 tarjeta-propiedad" data-zona="{esc(p["zona"])}" '
+        f'data-tipo="{esc(p["tipo"])}" data-ambientes="{p["ambientes"] or 0}" data-precio="{p["precio"]}" '
+        f'data-superficie="{sup}" data-orden="{orden}">\n'
+        f'            <a class="nav-link" href="{url_pagina(p)}" target="_blank" rel="noopener">\n'
+        '              <div class="card h-100">\n'
+        f'                <div class="cover cover-small" role="img" aria-label="{esc(p["titulo"])}" '
+        f'style="background-image:url({portada})">{estado}{cant_fotos}</div>\n'
+        '                <div class="card-body">\n'
+        f'                  <h5 class="card-title">{esc(p["barrio"])}, {esc(p["partido"])}</h5>\n'
+        f'                  <h5 class="card-title2">{esc(precio(p))}</h5>\n'
+        f'                  <p class="card-text">{esc(linea_resumen(p))}</p>\n'
+        "                </div>\n"
+        "              </div>\n"
+        "            </a>\n"
+        "          </div>\n"
+    )
+
+
+def html_filtros(props, operacion):
+    zonas = list(dict.fromkeys(p["zona"] for p in props))
+    tipos = sorted(set(p["tipo"] for p in props))
+
+    def opciones(valores, primero):
+        return f'<option value="">{primero}</option>' + "".join(
+            f'<option value="{esc(v)}">{esc(v)}</option>' for v in valores)
+
+    ambientes = '<option value="">Cualquiera</option>' + "".join(
+        f'<option value="{n}">{n}</option>' for n in (1, 2, 3, 4)) + '<option value="5">5 o más</option>'
+    moneda, topes = PRECIOS_FILTRO[operacion]
+    precios = '<option value="">Cualquiera</option>' + "".join(
+        f'<option value="{v}">Hasta {moneda} {numero(v)}</option>' for v in topes)
+    ordenes = (
+        '<option value="precio-asc">Precio: menor a mayor</option>'
+        '<option value="precio-desc">Precio: mayor a menor</option>'
+        '<option value="amb-desc">Más ambientes</option>'
+        '<option value="amb-asc">Menos ambientes</option>'
+        '<option value="sup-desc">Mayor superficie</option>'
+    )
+
+    def campo(nombre, etiqueta, opts):
+        ancho = "col-12" if nombre == "orden" else "col-6"
+        return (
+            f'        <div class="form-group {ancho} col-md">\n'
+            f'          <label for="f-{nombre}">{etiqueta}</label>\n'
+            f'          <select class="form-control" id="f-{nombre}" name="{nombre}">{opts}</select>\n'
+            "        </div>\n"
+        )
+
+    return (
+        '      <form id="filtros" class="filtros" autocomplete="off">\n'
+        '        <div class="form-row">\n'
+        + campo("zona", "Zona", opciones(zonas, "Todas"))
+        + campo("tipo", "Tipo", opciones(tipos, "Todos"))
+        + campo("ambientes", "Ambientes", ambientes)
+        + campo("precio", "Precio", precios)
+        + campo("orden", "Ordenar por", ordenes)
+        + "        </div>\n"
+        '        <div class="filtros-pie">\n'
+        '          <span id="contador" aria-live="polite"></span>\n'
+        '          <button type="button" class="btn btn-link js-limpiar">Limpiar filtros</button>\n'
+        "        </div>\n"
+        "      </form>\n"
+    )
+
+
+def render_listado(operacion, propiedades, base):
+    carpeta, _, _, titulo, imagen = OPERACIONES[operacion]
+    # Orden inicial (el mismo que trae el filtro por defecto): precio de menor a mayor.
+    props = sorted((p for p in propiedades if p["operacion"] == operacion and p["estado"] != "vendida"),
+                   key=lambda p: p["precio"])
+    con_filtros = bool(props)
+
+    if props:
+        tarjetas = "".join(html_tarjeta(p, i) for i, p in enumerate(props, 1))
+        cuerpo = (
+            (html_filtros(props, operacion) if con_filtros else "")
+            + '      <div class="row" id="grilla">\n' + tarjetas + "      </div>\n"
+            + ('      <div class="alert alert-info text-center" id="sin-resultados" hidden>'
+               "No hay propiedades con esos filtros. "
+               '<button type="button" class="btn btn-link p-0 align-baseline js-limpiar">Limpiar filtros</button>'
+               "</div>\n" if con_filtros else "")
+        )
+    else:
+        cuerpo = (
+            '      <div class="alert alert-danger"><center><strong> Por el momento no contamos con propiedades en '
+            "alquiler disponibles. Podés volver a consultar en los próximos días o contactarnos para avisarte "
+            "apenas ingrese una nueva opción. </strong></center></div>\n"
+        )
+
+    contenido = (
+        f'    <section id="{carpeta}">\n'
+        '      <div class="container mt-5 mb-5">\n' + cuerpo + "      </div>\n"
+        "    </section>"
+    )
+    hero = (
+        f'      <div class="cover d-flex justify-content-end align-items-start p-5 flex-column" '
+        f'style="background-image: url({imagen});">\n'
+        f"        <h1>{titulo}</h1>\n"
+        "      </div>"
+    )
+    desc = (f"Propiedades en {'venta' if operacion == 'venta' else 'alquiler'} de Agostino Propiedades, "
+            "inmobiliaria de Ramos Mejía.")
+    salida = pagina(base, dict(
+        TITULO=esc(f"{titulo} | Agostino Propiedades"),
+        DESCRIPCION=esc(desc),
+        URL=f"{DOMINIO}/{carpeta}.html",
+        OG_IMAGEN=DOMINIO + imagen,
+        HEAD_EXTRA="",
+        DENTRO_HEADER=hero,
+        DESPUES_HEADER="",
+        CONTENIDO=contenido,
+        SCRIPTS='    <script src="/assets/js/listado.js" defer></script>' if con_filtros else "",
+    ))
+    escribir(f"{carpeta}.html", salida)
+    return len(props)
 
 
 def main():
     ruta_json = os.path.join(RAIZ, "data", "propiedades.json")
     with open(ruta_json, encoding="utf-8") as f:
         propiedades = json.load(f)
-    with open(os.path.join(RAIZ, "_build", "plantilla_propiedad.html"), encoding="utf-8") as f:
-        plantilla = f.read()
+    with open(os.path.join(RAIZ, "_build", "base.html"), encoding="utf-8") as f:
+        base = f.read()
 
     cambio = False
     for p in propiedades:
-        ruta, n = render(p, plantilla)
+        n = render_detalle(p, base)
         if p.get("fotos") != n:
             print(f"  fotos de {p['id']}: {p.get('fotos')} -> {n}")
             p["fotos"] = n
             cambio = True
-        print(f"OK {os.path.relpath(ruta, RAIZ)} ({n} fotos)")
+        print(f"OK {url_pagina(p).lstrip('/')} ({n} fotos)")
+
+    for operacion in OPERACIONES:
+        n = render_listado(operacion, propiedades, base)
+        print(f"OK {OPERACIONES[operacion][0]}.html ({n} propiedades)")
 
     if cambio:
         with open(ruta_json, "w", encoding="utf-8", newline="\n") as f:
             json.dump(propiedades, f, ensure_ascii=False, indent=2)
             f.write("\n")
-    print(f"Listo: {len(propiedades)} páginas generadas.")
+    print(f"Listo: {len(propiedades)} propiedades.")
 
 
 if __name__ == "__main__":
