@@ -904,5 +904,58 @@
     "fotos": 25,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.5603854760684!2d-58.558266200000006!3d-34.6405481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e309da1047%3A0xdf348590a2a0042a!2sLas%20Heras%2072%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1777596158694!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "av_de_mayo546",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "2 Amb Apto profesional Muy Luminoso sobre Av. De Mayo 500",
+    "zona": "Ramos Mejía",
+    "direccion": "Av. De Mayo 546",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 500000,
+    "expensas": 120000,
+    "sup_total": 40,
+    "sup_cubierta": 37,
+    "ambientes": 2,
+    "dormitorios": 1,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 50,
+    "extras": [
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Departamento en alquiler con una superficie total de 40 m² y 37 m² cubiertos, totalmente recién pintado. Se encuentra en un entorno urbano consolidado, próximo a servicios y transportes, con accesibilidad a distintas zonas de la ciudad. El departamento ofrece un ambiente bien aprovechado, destacando un living comedor con pisos de madera plastificados que accede a un balcón con vista abierta al entorno de edificios.",
+      "Dispone de un dormitorio y un baño completo, ambos con ventilación natural. La cocina es independiente, cuenta con bajo mesada a estrenar, cocina a gas y ventana propia, lo que aporta buena ventilación e iluminación al ambiente. El balcón del living se presenta como un espacio adicional, ideal para disfrutar del exterior.",
+      "El locador no admite mascotas. Este departamento constituye una opción funcional y práctica para quienes buscan un ambiente confortable y bien ubicado dentro de la ciudad."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Apto profesional",
+        "Ascensor"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "Gas natural",
+        "Conexión para lavarropas",
+        "Internet/Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Desayunador",
+        "Terraza",
+        "Comedor",
+        "Living",
+        "Balcón",
+        "Placards"
+      ]
+    },
+    "fotos": 8,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.655142670842!2d-58.5644918!3d-34.6457231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e61255115b%3A0x4122721f449e4971!2sAv.%20de%20Mayo%20546%2C%20B1704%20La%20Matanza%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790362765183!5m2!1ses-419!2sar"
   }
 ]
