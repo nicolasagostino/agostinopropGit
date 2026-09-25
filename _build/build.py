@@ -47,6 +47,15 @@ OPERACIONES = {
     "alquiler": ("alquileres", "alq_", "Alquiler", "Alquileres", "/assets/img/edificio.jpg"),
 }
 
+# Propiedades que ya tenían link en la raíz (/ven_x.html) cuando se reorganizó el sitio y que pueden estar en QRs
+# impresos o en links compartidos: se les deja una redirección en la raíz. Las propiedades nuevas no la necesitan.
+# Cuando ya no haya QRs viejos se puede vaciar la lista y borrar esos archivos de la raíz.
+REDIRECCIONES_VIEJAS = {
+    "acevedo", "aliciamdj", "basualdo", "buenretiro", "castillo", "colombia", "democracia", "formosa",
+    "gonzalez_castillo", "lamadrid_mdq", "melo", "necochea", "paso", "piymargall", "ptederqui", "tacuari",
+    "lasheras",
+}
+
 NOTA_COTI = (
     "La venta de este inmueble está sujeta a la tramitación del Código de Transferencia "
     "de Inmuebles (COTI), de conformidad con la normativa vigente (Res AFIP 2371/08, "
@@ -285,12 +294,13 @@ def render_detalle(p, base):
         SCRIPTS='    <script type="module" src="/assets/js/galeria.js"></script>',
     ))
     escribir(url_pagina(p).lstrip("/"), salida)
-    escribir(nombre_redireccion(p), html_redireccion(p, desc_meta, fotos))
+    if p["id"] in REDIRECCIONES_VIEJAS:
+        escribir(nombre_redireccion(p), html_redireccion(p, desc_meta, fotos))
     return len(fotos)
 
 
 def nombre_redireccion(p):
-    # Antes las páginas estaban en la raíz (/ven_x.html): esos links siguen andando (QRs, WhatsApp, Google).
+    # Antes las páginas estaban en la raíz (/ven_x.html): ver REDIRECCIONES_VIEJAS.
     return os.path.basename(url_pagina(p))
 
 
