@@ -957,5 +957,198 @@
     "fotos": 8,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.655142670842!2d-58.5644918!3d-34.6457231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7e61255115b%3A0x4122721f449e4971!2sAv.%20de%20Mayo%20546%2C%20B1704%20La%20Matanza%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790362765183!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "cangallo941",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Ph 3 Amb Impecable Con Patio",
+    "zona": "Ramos Mejía",
+    "direccion": "Cangallo 941",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "ARS",
+    "precio": 670000,
+    "expensas": null,
+    "sup_total": 60,
+    "sup_cubierta": 50,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 40,
+    "extras": [],
+    "descripcion": [
+      "PH de 3 amb en planta baja sin expensas, se encuentra en impecable estado, en una de las zonas residenciales más buscadas de Ramos Mejía Cuenta con Living/comedor con cocina incorporada, pequeño patio con lavadero y termotaque, baño, 2 dormitorio (1 con placard)",
+      "Garantía propietaria familiar o de las empresas Premium o Finaer"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Placards"
+      ],
+      "Servicios": [
+        "Internet / Wifi",
+        "Gas natural"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor",
+        "Patio",
+        "Living"
+      ]
+    },
+    "fotos": 10,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.9890720854364!2d-58.5683204!3d-34.65535239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7c37752f687%3A0xc6e4febe2b7d1405!2sCangallo%20941%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363144533!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "palacios112",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Departamento 2 Amb En Planta Baja A 1 Cuadra De Av Rivadavia",
+    "zona": "Ramos Mejía",
+    "direccion": "Palacios 112",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 350000,
+    "expensas": 120000,
+    "sup_total": 29,
+    "sup_cubierta": 26,
+    "ambientes": 2,
+    "dormitorios": 1,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 25,
+    "extras": [
+      "Interno",
+      "Orientación N"
+    ],
+    "descripcion": [
+      "DEPARTAMENTO PLANTA BAJA DE 2 AMB QUE CONSTA DE : LIVING/COMEDOR CON COCINA INCORPORADA - BAÑO COMPLETO - 1 DORMITORIO C/FRENTE DE PLACARD Y PEQUEÑO PATIO",
+      "LAS EXPENSAS INCLUYEN EL PAGO DE AYSA",
+      "GARANTIA: 1 PROPIETARIA FAMILIAR ó EMPRESAS FINAER ó PREMIUM"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Salón de usos múltiples",
+        "Ascensor",
+        "Placards"
+      ],
+      "Servicios": [
+        "Internet / Wifi",
+        "Agua corriente",
+        "Gas natural"
+      ],
+      "Ambientes": [
+        "Comedor",
+        "Living",
+        "Patio",
+        "Cocina"
+      ]
+    },
+    "fotos": 5,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.5619556612946!2d-58.5525188!3d-34.6412851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8098bfd02ed%3A0x68e2130cfe8c59e8!2sAlfredo%20Lorenzo%20Palacios%20112%2C%20B1704AQD%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363391528!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "pueyrredon622",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Departamento 3 Amb Al Frente Muy Bueno Y Luminoso",
+    "zona": "Ramos Mejía",
+    "direccion": "Pueyrredon 622",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 630000,
+    "expensas": 70000,
+    "sup_total": 55,
+    "sup_cubierta": 53,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 50,
+    "extras": [
+      "Orientación O",
+      "Frente"
+    ],
+    "descripcion": [
+      "2° PISO x ESCALERA AL FRENTE CON BALCÓN. LIVING/COMEDOR CON BALCÓN - COCINA INSTALADA AMPLIO BAJO MEDASA - BAÑO - 2 DORMITORIOS (1 C/PLACARD), SE ENCUENTRA EN MUY BUEN ESTADO",
+      "GARANTÍA PROPIETARIA FAMILIAR O EMPRESAS FINAER O PREMIUM INQUILINOS CON INGRESO DEMOSTRABLE POR $ 2.000.000.-"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Placards",
+        "Ascensor"
+      ],
+      "Servicios": [
+        "Internet / Wifi",
+        "Agua corriente",
+        "Gas natural"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Living",
+        "Comedor",
+        "Balcón"
+      ]
+    },
+    "fotos": 13,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.684270899366!2d-58.558316299999994!3d-34.6450087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7a48b3acb53%3A0xc618723706688d3c!2sPueyrred%C3%B3n%20622%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363584235!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "vieytes2",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Departamento 3 Amb Muy Luminoso",
+    "zona": "Ciudadela",
+    "direccion": "Vieytes 2",
+    "barrio": "Ciudadela",
+    "partido": "Tres de Febrero",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 600000,
+    "expensas": 100000,
+    "sup_total": 46,
+    "sup_cubierta": 46,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 45,
+    "extras": [
+      "Orientación O",
+      "Interno"
+    ],
+    "descripcion": [
+      "DEPARTAMENTO AL FRENTE 3 CDS ESTACIÓN LIVING/COMEDOR - COCINA - BAÑO- 2 DORMITORIOS (1 C/PLACARD) SE ENCUENTRA EN IMPECABLES CONDICIONES, RECIÉN PINTADO",
+      "SE ALQUILA UNICAMENTE CON GARANTÍA DE EMPRESAS PREMIUM ó FINAER"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Ascensor",
+        "Placards"
+      ],
+      "Servicios": [
+        "Agua corriente",
+        "TV",
+        "Gas natural",
+        "Internet / Wifi"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor",
+        "Living"
+      ]
+    },
+    "fotos": 10,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.8816230019843!2d-58.545435923935095!3d-34.64016565942446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc81275eac26b%3A0xc269d3490220c815!2sAvenida%20Rivadavia%20%26%20Hip%C3%B3lito%20Vieytes%2C%20B1702%20Ciudadela%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363833916!5m2!1ses-419!2sar"
   }
 ]
