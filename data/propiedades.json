@@ -909,9 +909,9 @@
     "id": "av_de_mayo546",
     "operacion": "alquiler",
     "estado": "disponible",
-    "titulo": "2 Amb Apto profesional Muy Luminoso sobre Av. De Mayo 500",
+    "titulo": "2 Amb Apto Profesional Muy Luminoso sobre Av de Mayo al 500",
     "zona": "Ramos Mejía",
-    "direccion": "Av. De Mayo 546",
+    "direccion": "Av. de Mayo 546",
     "barrio": "Ramos Mejía",
     "partido": "La Matanza",
     "tipo": "Departamento",
@@ -962,7 +962,7 @@
     "id": "cangallo941",
     "operacion": "alquiler",
     "estado": "disponible",
-    "titulo": "Ph 3 Amb Impecable Con Patio",
+    "titulo": "PH 3 Amb Impecable Con Patio",
     "zona": "Ramos Mejía",
     "direccion": "Cangallo 941",
     "barrio": "Ramos Mejía",
@@ -980,7 +980,7 @@
     "antiguedad": 40,
     "extras": [],
     "descripcion": [
-      "PH de 3 amb en planta baja sin expensas, se encuentra en impecable estado, en una de las zonas residenciales más buscadas de Ramos Mejía Cuenta con Living/comedor con cocina incorporada, pequeño patio con lavadero y termotaque, baño, 2 dormitorio (1 con placard)",
+      "PH de 3 amb en planta baja sin expensas, se encuentra en impecable estado, en una de las zonas residenciales más buscadas de Ramos Mejía. Cuenta con living/comedor con cocina incorporada, pequeño patio con lavadero y termotanque, baño, 2 dormitorios (1 con placard).",
       "Garantía propietaria familiar o de las empresas Premium o Finaer"
     ],
     "caracteristicas": {
@@ -1027,9 +1027,9 @@
       "Orientación N"
     ],
     "descripcion": [
-      "DEPARTAMENTO PLANTA BAJA DE 2 AMB QUE CONSTA DE : LIVING/COMEDOR CON COCINA INCORPORADA - BAÑO COMPLETO - 1 DORMITORIO C/FRENTE DE PLACARD Y PEQUEÑO PATIO",
-      "LAS EXPENSAS INCLUYEN EL PAGO DE AYSA",
-      "GARANTIA: 1 PROPIETARIA FAMILIAR ó EMPRESAS FINAER ó PREMIUM"
+      "Departamento planta baja de 2 amb que consta de: living/comedor con cocina incorporada - baño completo - 1 dormitorio c/frente de placard y pequeño patio.",
+      "Las expensas incluyen el pago de AySA.",
+      "Garantía: 1 propietaria familiar o empresas Finaer o Premium."
     ],
     "caracteristicas": {
       "Características Generales": [
@@ -1078,13 +1078,12 @@
       "Frente"
     ],
     "descripcion": [
-      "2° PISO x ESCALERA AL FRENTE CON BALCÓN. LIVING/COMEDOR CON BALCÓN - COCINA INSTALADA AMPLIO BAJO MEDASA - BAÑO - 2 DORMITORIOS (1 C/PLACARD), SE ENCUENTRA EN MUY BUEN ESTADO",
-      "GARANTÍA PROPIETARIA FAMILIAR O EMPRESAS FINAER O PREMIUM INQUILINOS CON INGRESO DEMOSTRABLE POR $ 2.000.000.-"
+      "2° piso por escalera al frente con balcón. Living/comedor con balcón - cocina instalada, amplio bajo mesada - baño - 2 dormitorios (1 c/placard). Se encuentra en muy buen estado.",
+      "Garantía propietaria familiar o empresas Finaer o Premium. Inquilinos con ingreso demostrable por $ 2.000.000.-"
     ],
     "caracteristicas": {
       "Características Generales": [
-        "Placards",
-        "Ascensor"
+        "Placards"
       ],
       "Servicios": [
         "Internet / Wifi",
@@ -1123,12 +1122,11 @@
     "cocheras": 0,
     "antiguedad": 45,
     "extras": [
-      "Orientación O",
-      "Interno"
+      "Orientación O"
     ],
     "descripcion": [
-      "DEPARTAMENTO AL FRENTE 3 CDS ESTACIÓN LIVING/COMEDOR - COCINA - BAÑO- 2 DORMITORIOS (1 C/PLACARD) SE ENCUENTRA EN IMPECABLES CONDICIONES, RECIÉN PINTADO",
-      "SE ALQUILA UNICAMENTE CON GARANTÍA DE EMPRESAS PREMIUM ó FINAER"
+      "Departamento al frente a 3 cuadras de la estación. Living/comedor - cocina - baño - 2 dormitorios (1 c/placard). Se encuentra en impecables condiciones, recién pintado.",
+      "Se alquila únicamente con garantía de empresas Premium o Finaer."
     ],
     "caracteristicas": {
       "Características Generales": [
@@ -1150,5 +1148,63 @@
     "fotos": 10,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.8816230019843!2d-58.545435923935095!3d-34.64016565942446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc81275eac26b%3A0xc269d3490220c815!2sAvenida%20Rivadavia%20%26%20Hip%C3%B3lito%20Vieytes%2C%20B1702%20Ciudadela%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363833916!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "rivadavia",
+    "operacion": "alquiler",
+    "estado": "disponible",
+    "titulo": "Departamento 2 Amb Apto Profesional",
+    "zona": "Ramos Mejía",
+    "direccion": "Av. Rivadavia 14340",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "Departamento",
+    "moneda": "ARS",
+    "precio": 500000,
+    "expensas": 150000,
+    "sup_total": 40,
+    "sup_cubierta": 40,
+    "ambientes": 2,
+    "dormitorios": 1,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 60,
+    "extras": [
+      "Apto profesional",
+      "Piso 10",
+      "Frente",
+      "Orientación Norte",
+      "Luminoso"
+    ],
+    "descripcion": [
+      "Zona comercial sobre Av Rivadavia, a 3 cuadras de la estación, departamento en edificio apto profesional que consta de: Living/comedor / cocina separada y sector de lavadero / 1 dormitorio c/placard / baño y placard en hall de distribución.",
+      "La unidad es muy luminosa, con todos los ambientes con vista abierta.",
+      "La garantía es, 1 garante propietario familiar o empresas de garantía Finaer ó Premium. Se alquila con opción vivienda o uso profesional."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Apto profesional",
+        "Ascensor",
+        "Recepción",
+        "Lavandería",
+        "No admite mascotas"
+      ],
+      "Servicios": [
+        "Internet / Wifi",
+        "Agua corriente",
+        "Gas natural",
+        "Conexión para lavarropas"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor",
+        "Living",
+        "Lavadero",
+        "Placards"
+      ]
+    },
+    "fotos": 10,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.8177427345813!2d-58.569281600000004!3d-34.641735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7ee2f4dd7fd%3A0x969e24d4f025385b!2sAv.%20Rivadavia%2014340%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790369079001!5m2!1ses-419!2sar"
   }
 ]
