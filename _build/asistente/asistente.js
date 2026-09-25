@@ -317,7 +317,19 @@ function sugerirId() {
   return id;
 }
 
+// Toma lo que hay escrito en pantalla: cubre valores que el navegador completó o restauró sin avisar (autocompletado, pegado, recarga)
+function sincronizar() {
+  const E = S.E;
+  $$('[data-campo]').forEach((t) => {
+    const c = t.dataset.campo;
+    if (c === '__desc') E.desc = t.value;
+    else if (c === 'operacion') { if (t.checked) E.p.operacion = t.value; }
+    else if (!t.disabled) E.p[c] = t.value;
+  });
+}
+
 function armar() {
+  sincronizar();
   const E = S.E, p = JSON.parse(JSON.stringify(E.p));
   p.id = p.id.trim().toLowerCase();
   p.descripcion = E.desc.split(/\n\s*\n/).map((x) => x.replace(/\s*\n\s*/g, ' ').trim()).filter(Boolean);
@@ -340,7 +352,9 @@ async function revisar() {
     if (S.E !== E) return;
     pintarRevision(chequeo);
     pintarTarjeta(tarjeta.html);
-  } catch (e) { /* la revisión es solo una ayuda */ }
+  } catch (e) {
+    if (S.E === E) $('#revision').innerHTML = '<li class="err">No se pudo actualizar la revisión. ¿Sigue abierta la ventana de la terminal con el asistente? Si la cerraste, volvé a ejecutar <code>python _build/asistente.py</code> (lo que escribiste acá se pierde).</li>';
+  }
 }
 
 function pintarRevision({ errores, avisos }) {
@@ -519,7 +533,8 @@ document.addEventListener('click', async (ev) => {
 document.addEventListener('change', (ev) => {
   const t = ev.target;
   if (t.dataset.accion === 'estado') return accionRapida(t.dataset.id, 'estado', t.value, 'Estado actualizado.');
-  if (t.id === 'archivos') { agregarArchivos(t.files); t.value = ''; }
+  if (t.id === 'archivos') { agregarArchivos(t.files); t.value = ''; return; }
+  if (S.E && t.dataset.campo) { sincronizar(); S.E.sucio = true; programarRevision(); }
 });
 
 document.addEventListener('input', (ev) => {
