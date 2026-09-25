@@ -80,7 +80,7 @@ Cambiar `estado` a `"reservada"` (aparece con una etiqueta) o `"vendida"` (deja 
 
 #### Quitar una propiedad
 
-Borrar su registro del JSON, su página (`ventas/ven_<id>.html` o `alquileres/alq_<id>.html`) y su carpeta de fotos. El generador no borra páginas viejas.
+Borrar su registro del JSON, su página (`ventas/ven_<id>.html` o `alquileres/alq_<id>.html`), su redirección de la raíz (`ven_<id>.html` o `alq_<id>.html`) y su carpeta de fotos. El generador no borra páginas viejas.
 
 ### Editar Home, Tasaciones, Quiénes somos o Contacto
 
@@ -122,4 +122,5 @@ Editar `_build/base.html` y correr el generador: se actualizan todas las página
 - **Aviso COTI:** se agrega solo al final de todas las propiedades en venta (texto fijo en `_build/build.py`).
 - **Rangos del filtro de precio:** están en `PRECIOS_FILTRO` de `_build/build.py`; conviene ajustarlos si cambian los precios.
 - **Estadísticas de visitas:** Google Analytics 4 (analytics.google.com, ID de medición `G-29H59XEFS2`, puesto en `_build/base.html`). Además de las visitas registra dos eventos propios, definidos en `scripts.js`: `clic_whatsapp` (con la ubicación del botón) y `generate_lead` (formulario de contacto o de tasación enviado). No cuenta las visitas hechas desde `localhost`.
+- **Links viejos (QR, WhatsApp):** antes las páginas de cada propiedad estaban en la raíz (`/ven_x.html`). Por cada propiedad el generador deja en la raíz una pequeña página que redirige a la nueva dirección (`/ventas/ven_x.html`), así los QR impresos y los links ya compartidos siguen funcionando. No hace falta tocarlas.
 - **Dominio:** el archivo `CNAME` apunta a `agostinoprop.com.ar`.

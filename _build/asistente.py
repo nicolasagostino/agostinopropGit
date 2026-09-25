@@ -293,8 +293,9 @@ def api_quitar(consulta, cuerpo):
     indice = buscar(props, cuerpo.get("id"))
     p = props.pop(indice)
     pagina = os.path.join(RAIZ, build.url_pagina(p).lstrip("/").replace("/", os.sep))
-    if os.path.exists(pagina):
-        os.remove(pagina)
+    for ruta in (pagina, os.path.join(RAIZ, build.nombre_redireccion(p))):
+        if os.path.exists(ruta):
+            os.remove(ruta)
     if cuerpo.get("borrarFotos"):
         base = carpeta_fotos(p["operacion"], p["id"])
         if os.path.isdir(base):

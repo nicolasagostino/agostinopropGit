@@ -285,7 +285,41 @@ def render_detalle(p, base):
         SCRIPTS='    <script type="module" src="/assets/js/galeria.js"></script>',
     ))
     escribir(url_pagina(p).lstrip("/"), salida)
+    escribir(nombre_redireccion(p), html_redireccion(p, desc_meta, fotos))
     return len(fotos)
+
+
+def nombre_redireccion(p):
+    # Antes las páginas estaban en la raíz (/ven_x.html): esos links siguen andando (QRs, WhatsApp, Google).
+    return os.path.basename(url_pagina(p))
+
+
+def html_redireccion(p, descripcion, fotos):
+    nuevo = url_pagina(p)
+    titulo = esc(f"{p['titulo']} | Agostino Propiedades")
+    imagen = f'    <meta property="og:image" content="{DOMINIO + fotos[0]["url"]}" />\n' if fotos else ""
+    return (
+        "<!DOCTYPE html>\n"
+        "<!-- Redirección desde la dirección vieja. Generada por _build/build.py. No editar a mano. -->\n"
+        '<html lang="es">\n'
+        "  <head>\n"
+        '    <meta charset="utf-8" />\n'
+        f"    <title>{titulo}</title>\n"
+        f'    <meta name="description" content="{esc(descripcion)}" />\n'
+        '    <meta name="robots" content="noindex" />\n'
+        f'    <link rel="canonical" href="{DOMINIO + nuevo}" />\n'
+        f'    <meta http-equiv="refresh" content="0; url={nuevo}" />\n'
+        '    <meta property="og:type" content="website" />\n'
+        '    <meta property="og:site_name" content="Agostino Propiedades" />\n'
+        f'    <meta property="og:title" content="{titulo}" />\n'
+        f'    <meta property="og:description" content="{esc(descripcion)}" />\n'
+        f'    <meta property="og:url" content="{DOMINIO + nuevo}" />\n'
+        f"{imagen}"
+        f'    <script>location.replace("{nuevo}" + location.search + location.hash);</script>\n'
+        "  </head>\n"
+        f'  <body><p>Esta propiedad está ahora en <a href="{nuevo}">{DOMINIO + nuevo}</a>.</p></body>\n'
+        "</html>\n"
+    )
 
 
 # ---------- listados ----------
