@@ -736,6 +736,15 @@ img.ig {
   color: #8b929a;
 }
 
+.pie-legal a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pie-legal a:hover {
+  color: #fff;
+}
+
 @media (max-width: 800px) {
   .pie-cols {
     grid-template-columns: 1fr;
