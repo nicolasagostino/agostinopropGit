@@ -1003,57 +1003,6 @@
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.9890720854364!2d-58.5683204!3d-34.65535239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7c37752f687%3A0xc6e4febe2b7d1405!2sCangallo%20941%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363144533!5m2!1ses-419!2sar"
   },
   {
-    "id": "palacios112",
-    "operacion": "alquiler",
-    "estado": "disponible",
-    "titulo": "Departamento 2 Amb En Planta Baja A 1 Cuadra De Av Rivadavia",
-    "zona": "Ramos Mejía",
-    "direccion": "Palacios 112",
-    "barrio": "Ramos Mejía",
-    "partido": "La Matanza",
-    "tipo": "Departamento",
-    "moneda": "ARS",
-    "precio": 350000,
-    "expensas": 120000,
-    "sup_total": 29,
-    "sup_cubierta": 26,
-    "ambientes": 2,
-    "dormitorios": 1,
-    "banos": 1,
-    "cocheras": 0,
-    "antiguedad": 25,
-    "extras": [
-      "Interno",
-      "Orientación N"
-    ],
-    "descripcion": [
-      "Departamento planta baja de 2 amb que consta de: living/comedor con cocina incorporada - baño completo - 1 dormitorio c/frente de placard y pequeño patio.",
-      "Las expensas incluyen el pago de AySA.",
-      "Garantía: 1 propietaria familiar o empresas Finaer o Premium."
-    ],
-    "caracteristicas": {
-      "Características Generales": [
-        "Salón de usos múltiples",
-        "Ascensor",
-        "Placards"
-      ],
-      "Servicios": [
-        "Internet / Wifi",
-        "Agua corriente",
-        "Gas natural"
-      ],
-      "Ambientes": [
-        "Comedor",
-        "Living",
-        "Patio",
-        "Cocina"
-      ]
-    },
-    "fotos": 5,
-    "video": null,
-    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.5619556612946!2d-58.5525188!3d-34.6412851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8098bfd02ed%3A0x68e2130cfe8c59e8!2sAlfredo%20Lorenzo%20Palacios%20112%2C%20B1704AQD%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790363391528!5m2!1ses-419!2sar"
-  },
-  {
     "id": "pueyrredon622",
     "operacion": "alquiler",
     "estado": "disponible",
