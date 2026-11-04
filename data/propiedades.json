@@ -1155,5 +1155,47 @@
     "fotos": 10,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.8177427345813!2d-58.569281600000004!3d-34.641735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc7ee2f4dd7fd%3A0x969e24d4f025385b!2sAv.%20Rivadavia%2014340%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1790369079001!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "conesa",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "PH Independiente 4 Amb con Cochera",
+    "zona": "Ramos Mejía",
+    "direccion": "Gral. Conesa 177",
+    "barrio": "Ramos Mejía",
+    "partido": "La Matanza",
+    "tipo": "PH",
+    "moneda": "USD",
+    "precio": 88000,
+    "expensas": null,
+    "sup_total": 134,
+    "sup_cubierta": 73,
+    "ambientes": 4,
+    "dormitorios": 3,
+    "banos": 1,
+    "cocheras": 1,
+    "antiguedad": 58,
+    "extras": [],
+    "descripcion": [
+      "PH en venta de 4 ambientes ubicado en Ramos Mejía, desarrollado sobre un terreno de 7 metros de frente por 19 metros de largo en una sola planta. La propiedad cuenta con 73 m² de superficie construida, que comprenden un living comedor, cocina equipada, lavadero independiente, 1 baño y 3 dormitorios. Al frente dispone de una cochera cubierta y una superficie total de 134 m², de la cual 61 m² corresponden a patio y espacios semicubiertos. La unidad tiene 58 años de antigüedad, y se encuentra emplazada en una zona residencial consolidada de Ramos Mejía, con fácil acceso a paradas de colectivo, comercios locales, colegios y servicios esenciales en los alrededores."
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Cantidad plantas: 1",
+        "Cochera cubierta",
+        "Frente del terreno (mts) : 7",
+        "Largo del terreno (mts) : 19"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Lavadero",
+        "Living comedor",
+        "Patio"
+      ]
+    },
+    "fotos": 17,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29.51980400085449!2d-58.55937343520701!3d-34.64896884182917!2m3!1f345.2279127956341!2f89.12042850404222!3f0!3m2!1i1024!2i768!4f15.051653540301373!3m3!1m2!1s0x95bcc7de04eb3f43%3A0xe35debb3b1517fe0!2sFSC%2C%20Gral.%20Conesa%20177%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1793798359649!5m2!1ses-419!2sar"
   }
 ]
