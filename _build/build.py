@@ -210,6 +210,8 @@ def html_resumen(p):
 
     texto = f"Hola! Me interesa la propiedad: {p['titulo']} ({DOMINIO}{url_pagina(p)})"
     wa = f"https://wa.me/{WHATSAPP}?text={urllib.parse.quote(texto)}"
+    # El formulario de Contacto recibe qué propiedad se consulta y la manda en el mail (ver scripts.js)
+    contacto = "/contacto.html?" + urllib.parse.urlencode({"propiedad": p["titulo"], "link": DOMINIO + url_pagina(p)})
 
     return (
         '        <div class="content-card p-4 propiedad-resumen">\n'
@@ -220,7 +222,7 @@ def html_resumen(p):
         f'          <div class="propiedad-datos">{"".join(filas)}</div>\n'
         f"          {etiquetas}\n"
         f'          <a class="btn btn-success btn-block mt-3" href="{wa}" target="_blank" rel="noopener"><img class="ico-wsp" src="/assets/img/wpp.png" alt="" />Consultar por WhatsApp</a>\n'
-        '          <a class="btn btn-danger btn-block" href="/contacto.html">Contáctanos</a>\n'
+        f'          <a class="btn btn-danger btn-block" href="{esc(contacto)}">Contáctanos</a>\n'
         "        </div>\n"
     )
 
@@ -287,7 +289,10 @@ def render_detalle(p, base):
         DESCRIPCION=esc(desc_meta),
         URL=DOMINIO + url_pagina(p),
         OG_IMAGEN=DOMINIO + fotos[0]["url"] if fotos else "",
-        HEAD_EXTRA='    <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css" />\n',
+        HEAD_EXTRA=(
+            '    <link rel="stylesheet" href="/assets/vendor/photoswipe/photoswipe.css" />\n'
+            f'    <meta name="propiedad" content="{esc(p["titulo"])}" data-link="{esc(DOMINIO + url_pagina(p))}" />\n'
+        ),
         DENTRO_HEADER="",
         DESPUES_HEADER=barra,
         CONTENIDO=contenido,

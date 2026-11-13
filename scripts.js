@@ -38,6 +38,26 @@ jQuery('document').ready(function($){
     evento('clic_whatsapp', { ubicacion: lugar, pagina: location.pathname });
   });
 
+  // En la ficha de una propiedad, los botones de WhatsApp de la barra y flotante avisan cuál se consulta
+  var metaProp = $('meta[name="propiedad"]');
+  if (metaProp.length) {
+    var textoProp = 'Hola! Me interesa la propiedad: ' + metaProp.attr('content') + ' (' + metaProp.data('link') + ')';
+    $('.btn-topbar, .wsp-flotante').each(function () {
+      this.href = this.href.split('?')[0] + '?text=' + encodeURIComponent(textoProp);
+    });
+  }
+
+  // Formulario de Contacto: si viene de una ficha, ya sabe qué propiedad se consulta
+  var datosContacto = new URLSearchParams(location.search);
+  var campoProp = $('#form-contacto #propiedad');
+  if (campoProp.length && datosContacto.get('propiedad')) {
+    campoProp.val(datosContacto.get('propiedad'));
+    var enlace = datosContacto.get('link') || '';
+    if (/^https:\/\/agostinoprop\.com\.ar\//.test(enlace)) {
+      $('#propiedad-link').val(enlace).prop('disabled', false);
+    }
+  }
+
   // Formularios que se envían con Web3Forms (form[data-web3])
   $('form[data-web3]').each(function () {
     var form = $(this);

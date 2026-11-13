@@ -114,7 +114,7 @@ Editar `_build/base.html` y correr el generador: se actualizan todas las página
 
 ## Otras cosas a saber
 
-- **Formulario de contacto:** usa [Web3Forms](https://web3forms.com) y los mensajes llegan a agostinoprop@gmail.com. La clave está en `_build/paginas/contacto.html`.
+- **Formulario de contacto:** usa [Web3Forms](https://web3forms.com) y los mensajes llegan a agostinoprop@gmail.com. La clave está en `_build/paginas/contacto.html`. El botón "Contáctanos" de cada ficha lleva a `/contacto.html?propiedad=...&link=...`, y el formulario completa solo el campo "Propiedad" y el link (el mail los muestra); si la persona entra desde el menú, el campo queda vacío para que lo escriba. Los botones de WhatsApp de la barra y el flotante también mandan la propiedad cuando se está en una ficha (`scripts.js`).
 - **Opiniones de clientes:** están en `data/opiniones.json` (puntaje, cantidad y las reseñas). Se muestran en el Home y en Quiénes somos, y las cifras "4.4 ★ · 13 opiniones" salen de ese mismo archivo: al actualizarlo cambian en las dos páginas.
 - **Formulario de tasación:** está en `_build/paginas/tasaciones.html` y llega al mismo mail que el de contacto. El asunto empieza con "Nuevo mensaje desde agostinoprop.com.ar", así que el filtro de Gmail que reenvía a Yahoo también lo captura.
 - **Propiedades destacadas del Home:** se muestran 4 elegidas al azar en cada visita, entre las propiedades en venta disponibles (`assets/js/home.js`). No hace falta marcar ninguna.
