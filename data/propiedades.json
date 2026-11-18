@@ -1197,5 +1197,52 @@
     "fotos": 17,
     "video": null,
     "mapa": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29.51980400085449!2d-58.55937343520701!3d-34.64896884182917!2m3!1f345.2279127956341!2f89.12042850404222!3f0!3m2!1i1024!2i768!4f15.051653540301373!3m3!1m2!1s0x95bcc7de04eb3f43%3A0xe35debb3b1517fe0!2sFSC%2C%20Gral.%20Conesa%20177%2C%20B1704%20Ramos%20Mej%C3%ADa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1793798359649!5m2!1ses-419!2sar"
+  },
+  {
+    "id": "canuelas",
+    "operacion": "venta",
+    "estado": "disponible",
+    "titulo": "Casa de 3 Amb en Parque de 967 m²",
+    "zona": "Cañuelas",
+    "direccion": "Cañuelas",
+    "barrio": "Cañuelas",
+    "partido": "Cañuelas",
+    "tipo": "Casa",
+    "moneda": "USD",
+    "precio": 67000,
+    "expensas": null,
+    "sup_total": 967,
+    "sup_cubierta": 74,
+    "ambientes": 3,
+    "dormitorios": 2,
+    "banos": 1,
+    "cocheras": 0,
+    "antiguedad": 4,
+    "extras": [],
+    "descripcion": [
+      "SOBRE UN TERRENO DE 967 m2 ENCONTRAMOS UNA CASA DE 3 AMBIENTES MÁS ESCRITORIO, DESARROLLADA EN PLANTA BAJA",
+      "Se ingresa por una entrada de 5 x 45 mts. que desemboca en un terreno de 38 mts de frente x 21 mts de fondo donde encontramos una casa de fabricación industrial que cuenta con living comedor con cocina incorporada, baño completo, 2 dormitorios y una amplia galeria cubierta, cerrada con paredes y ventanas; a continuación de la misma una oficina o escritorio brindando un plus de comodidad a la casa. Todo se encuentra en impecable estado. Separado de la casa por unos mts de parque cuenta con un espacio de gimnasio o galpón cerrado y techado, a terminar, con espacio para baño con doble circulación (interior y exterior).",
+      "Todo lo nombrado anteriormente está ubicado en zona rural a mts de la autovia 3 y a sólo 4 Km del centro de Cañuelas, proporcionando una vida tranquila rodeada de natuarleza con la ventaja de acceder en pocos minutos a una ciudad de gran desarrollo.",
+      "Es la opción ideal para quién busca vivir a un ritmo más tranquilo, fuera de las grandes ciudades de Buenos Aires, alejado de la inseguridad y la rutina; siendo también una excelente propiedad para descansar los fines de semana cumpliedo la función de amplia casaquinta.",
+      "Los vendedores pueden tomar en parte de pago terreno o casa en Mar del Plata, en la franja de la Ruta 11, entre el Faro y Chapadmalal"
+    ],
+    "caracteristicas": {
+      "Características Generales": [
+        "Permite mascotas",
+        "Cantidad plantas: 1",
+        "Cobertura cochera: Descubierta",
+        "Frente del terreno (mts) : 38",
+        "Largo del terreno (mts) : 21"
+      ],
+      "Ambientes": [
+        "Cocina",
+        "Comedor de diario",
+        "Living comedor",
+        "Escritorio"
+      ]
+    },
+    "fotos": 22,
+    "video": null,
+    "mapa": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d629.2829448978675!2d-58.738307574811444!3d-35.09881470177347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1795001826187!5m2!1ses-419!2sar"
   }
 ]
